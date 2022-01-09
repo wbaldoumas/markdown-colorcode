@@ -8,5 +8,17 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
-      
+      interval: "weekly"
+      day: "wednesday"
+  - package-ecosystem: "nuget"
+    directory: "/src/Markdig.ColorCode"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    open-pull-requests-limit: 5
+  - package-ecosystem: "nuget"
+    directory: "/tests/Markdig.ColorCode.UnitTests"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    open-pull-requests-limit: 5

@@ -23,7 +23,7 @@ jobs:
     - name: Unit Test
       run: |
         cd ./tests/MarkDig.ColorCode.UnitTests/
-        dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutput=/home/runner/work/MarkDig.ColorCode/MarkDig.ColorCode/ /p:CoverletOutputFormat=opencover
+        dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutput=/home/runner/work/markdig-colorcode/markdig-colorcode/ /p:CoverletOutputFormat=opencover
     - name: Publish Code Coverage
       uses: codecov/codecov-action@v2
       with:
