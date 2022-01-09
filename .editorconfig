@@ -1,0 +1,31 @@
+[*.cs]
+
+# prefix calls to an instance member with 'this'
+dotnet_diagnostic.SA1101.severity = none
+
+# field names must not begin with underscores
+dotnet_diagnostic.SA1309.severity = none
+
+# related to SA1309, field names must begin with a lowercase letter
+dotnet_diagnostic.SA1312.severity = none
+
+# the last statement in a multi-line initializer or list must end with a trailing comma
+dotnet_diagnostic.SA1413.severity = none
+
+# documentation for properties must begin with the accessor keywords on the property
+dotnet_diagnostic.SA1623.severity = none
+
+# all XML documentation sections must end with a period/full stop
+dotnet_diagnostic.SA1629.severity = none
+
+# every C# code file must have a standard file header
+dotnet_diagnostic.SA1633.severity = none
+
+# require standardized summary test for constructors
+dotnet_diagnostic.SA1642.severity = none
+
+[*Tests.cs]
+
+# require XML documentation
+dotnet_diagnostic.SA1600.severity = none
+dotnet_diagnostic.CS1591.severity = none
