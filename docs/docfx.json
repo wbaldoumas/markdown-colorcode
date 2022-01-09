@@ -1,0 +1,40 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "files": ["**/Markdig.ColorCode.csproj"],
+                    "exclude": ["**/bin/**", "**/obj/**"],
+                    "src": "../"
+                }
+            ],
+            "dest": "../site/yml/api"
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "files": [ "**/*.yml" ],
+                "src": "../site/yml/api",
+                "dest": "api"
+            },
+            {
+                "files": [
+                    "*.md",
+                    "toc.yml"
+                ]
+            }
+        ],
+        "template": [
+            "default",
+            "templates/material"
+        ],
+        "globalMetadata": {
+            "_appTitle": "Markdig.ColorCode",
+            "_enableSearch": true
+        },
+        "markdownEngineName": "markdig",
+        "dest": "../site/html",
+        "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ]
+    }
+}
