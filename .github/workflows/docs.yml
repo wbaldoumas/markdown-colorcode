@@ -1,0 +1,38 @@
+name: Build and Deploy Documentation
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-docs:
+    name: Build and Deploy Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+
+      - name: Parse Docs
+        uses: nikeee/docfx-action@v1.0.0
+        with:
+          args: metadata docs/docfx.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      
+      - name: Transform ToC
+        run: cd docs && yarn && sudo node toc.js
+
+      - name: Build Docs
+        uses: nikeee/docfx-action@v1.0.0
+        with:
+          args: build docs/docfx.json
+
+      - name: Deploy Docs
+        uses: JamesIves/github-pages-deploy-action@4.2.0
+        with:
+          branch: gh-pages
+          folder: site/html
+          git-config-email: <>
