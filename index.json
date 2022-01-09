@@ -11,7 +11,7 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "MarkDig.ColorCode | Markdig.ColorCode",
-    "keywords": "MarkDig.ColorCode An extension for Markdig that adds syntax highlighting to code through the power of ColorCode. See API documentation for detailed information."
+    "title": "Markdig.ColorCode | Markdig.ColorCode",
+    "keywords": "Markdig.ColorCode An extension for Markdig that adds syntax highlighting to code through the power of ColorCode. See API documentation for detailed information."
   }
 }
