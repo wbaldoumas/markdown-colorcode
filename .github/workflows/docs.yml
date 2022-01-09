@@ -2,7 +2,7 @@ name: Build and Deploy Documentation
 
 on:
   push:
-    branches: [ main ]
+    branches: [ documentation_tweaks ]
 
 jobs:
   deploy-docs:
