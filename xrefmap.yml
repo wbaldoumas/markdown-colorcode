@@ -1,0 +1,28 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Markdig.ColorCode
+  name: Markdig.ColorCode
+  href: api/Markdig.ColorCode.html
+  commentId: N:Markdig.ColorCode
+  fullName: Markdig.ColorCode
+  nameWithType: Markdig.ColorCode
+- uid: Markdig.ColorCode.Foo
+  name: Foo
+  href: api/Markdig.ColorCode.Foo.html
+  commentId: T:Markdig.ColorCode.Foo
+  fullName: Markdig.ColorCode.Foo
+  nameWithType: Foo
+- uid: Markdig.ColorCode.Foo.Bar
+  name: Bar()
+  href: api/Markdig.ColorCode.Foo.html#Markdig_ColorCode_Foo_Bar
+  commentId: M:Markdig.ColorCode.Foo.Bar
+  fullName: Markdig.ColorCode.Foo.Bar()
+  nameWithType: Foo.Bar()
+- uid: Markdig.ColorCode.Foo.Bar*
+  name: Bar
+  href: api/Markdig.ColorCode.Foo.html#Markdig_ColorCode_Foo_Bar_
+  commentId: Overload:Markdig.ColorCode.Foo.Bar
+  isSpec: "True"
+  fullName: Markdig.ColorCode.Foo.Bar
+  nameWithType: Foo.Bar

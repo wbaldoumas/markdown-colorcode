@@ -1,0 +1,17 @@
+{
+  "api/Markdig.ColorCode.Foo.html": {
+    "href": "api/Markdig.ColorCode.Foo.html",
+    "title": "Class Foo | Markdig.ColorCode",
+    "keywords": "Class Foo Just a temporary mock class to aid in bootstrapping the library. Inheritance Object Foo Namespace : Markdig.ColorCode Assembly : Markdig.ColorCode.dll Syntax public class Foo : object Methods | Improve this Doc View Source Bar() Just a temporary mock method to aid in bootstrapping the library. Declaration public string Bar() Returns Type Description String Bar"
+  },
+  "api/Markdig.ColorCode.html": {
+    "href": "api/Markdig.ColorCode.html",
+    "title": "Namespace Markdig.ColorCode | Markdig.ColorCode",
+    "keywords": "Namespace Markdig.ColorCode Classes Foo Just a temporary mock class to aid in bootstrapping the library."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "MarkDig.ColorCode | Markdig.ColorCode",
+    "keywords": "MarkDig.ColorCode An extension for Markdig that adds syntax highlighting to code through the power of ColorCode. See API documentation for detailed information."
+  }
+}
