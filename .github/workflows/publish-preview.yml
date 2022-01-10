@@ -1,0 +1,41 @@
+name: Publish Preview to NuGet
+
+on:
+  push:
+    tags:
+    - "v[0-9]+.[0-9]+.[0-9]+-preview-[0-9]+"
+    - "v[0-9]+.[0-9]+.[0-9]+-alpha-[0-9]+"
+    - "v[0-9]+.[0-9]+.[0-9]+-beta-[0-9]+"
+    - "v[0-9]+.[0-9]+.[0-9]+-prerelease-[0-9]+"
+    - "v[0-9]+.[0-9]+.[0-9]+-rc-[0-9]+"
+
+jobs:
+  preview:
+    name: Publish Preview
+    runs-on: ubuntu-latest
+    environment:
+      name: "Publish Preview"
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET 6
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore Dependencies
+      run: dotnet restore src
+
+    - name: Build
+      run: dotnet build src --configuration Release --no-restore
+
+    - name: Set VERSION variable from tag
+      run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
+
+    - name: Pack NuGet
+      run: dotnet pack src/Markdig.ColorCode/Markdig.ColorCode.csproj --no-build --configuration Release /p:Version=${VERSION} --output src
+
+    - name: Publish NuGet
+      run: dotnet nuget push src/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_KEY} --skip-duplicate
+      env:
+        NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
