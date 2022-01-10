@@ -36,6 +36,6 @@ jobs:
       run: dotnet pack src/Markdig.ColorCode/Markdig.ColorCode.csproj --no-build --configuration Release /p:Version=${VERSION} --output src
 
     - name: Publish NuGet
-      run: dotnet nuget push src/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_KEY} --skip-duplicate
+      run: dotnet nuget push src/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_KEY}
       env:
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
