@@ -1,5 +1,9 @@
 [*.cs]
 
+# parantheses formatting
+dotnet_diagnostic.SA1009.severity = none
+dotnet_diagnostic.SA1111.severity = none
+
 # prefix calls to an instance member with 'this'
 dotnet_diagnostic.SA1101.severity = none
 

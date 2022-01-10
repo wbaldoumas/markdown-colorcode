@@ -21,9 +21,7 @@ public class ColorCodeExtension : IMarkdownExtension
     /// Setups this extension for the specified pipeline.
     /// </summary>
     /// <param name="pipeline">The pipeline.</param>
-    public void Setup(MarkdownPipelineBuilder pipeline)
-    {
-    }
+    public void Setup(MarkdownPipelineBuilder pipeline) { }
 
     /// <summary>
     /// Setups this extension for the specified renderer.
@@ -49,7 +47,13 @@ public class ColorCodeExtension : IMarkdownExtension
                     codeBlockRenderer = new CodeBlockRenderer();
                 }
 
-                htmlRenderer.ObjectRenderers.AddIfNotAlready(new ColorCodeBlockRenderer(codeBlockRenderer, _styleDictionary));
+                htmlRenderer.ObjectRenderers.AddIfNotAlready(
+                    new ColorCodeBlockRenderer(
+                        codeBlockRenderer,
+                        _styleDictionary
+                    )
+                );
+
                 break;
             }
         }

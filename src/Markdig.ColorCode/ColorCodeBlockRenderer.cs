@@ -13,62 +13,62 @@ namespace Markdig.ColorCode;
 /// </summary>
 public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
 {
-    private readonly CodeBlockRenderer _underlyingRenderer;
+    private readonly CodeBlockRenderer _underlyingCodeBlockRenderer;
     private readonly StyleDictionary _styleDictionary;
 
     /// <summary>
-    ///     Create a new <see cref="ColorCodeBlockRenderer"/> with the specified <paramref name="underlyingRenderer"/> and <paramref name="styleDictionary"/>.
+    ///     Create a new <see cref="ColorCodeBlockRenderer"/> with the specified <paramref name="underlyingCodeBlockRenderer"/> and <paramref name="styleDictionary"/>.
     /// </summary>
-    /// <param name="underlyingRenderer">The underlying <see cref="CodeBlockRenderer"/> to handle unsupported languages.</param>
+    /// <param name="underlyingCodeBlockRenderer">The underlying <see cref="CodeBlockRenderer"/> to handle unsupported languages.</param>
     /// <param name="styleDictionary">A <see cref="StyleDictionary"/> for custom styling.</param>
-    public ColorCodeBlockRenderer(CodeBlockRenderer underlyingRenderer, StyleDictionary styleDictionary)
+    public ColorCodeBlockRenderer(CodeBlockRenderer underlyingCodeBlockRenderer, StyleDictionary styleDictionary)
     {
-        _underlyingRenderer = underlyingRenderer;
+        _underlyingCodeBlockRenderer = underlyingCodeBlockRenderer;
         _styleDictionary = styleDictionary;
     }
 
     /// <summary>
-    /// Writes the specified <see cref="MarkdownObject"/> to the <paramref name="renderer"/>.
+    ///     Writes the specified <see cref="MarkdownObject"/> to the <paramref name="renderer"/>.
     /// </summary>
     /// <param name="renderer">The renderer.</param>
     /// <param name="codeBlock">The code block to render.</param>
     protected override void Write(HtmlRenderer renderer, CodeBlock codeBlock)
     {
-        if (codeBlock is not FencedCodeBlock fencedCodeBlock || codeBlock.Parser is not FencedCodeBlockParser parser)
+        if (codeBlock is not FencedCodeBlock fencedCodeBlock ||
+            codeBlock.Parser is not FencedCodeBlockParser fencedCodeBlockParser)
         {
-            _underlyingRenderer.Write(renderer, codeBlock);
-            return;
-        }
-
-        var languageId = fencedCodeBlock.Info!.Replace(parser.InfoPrefix!, string.Empty);
-
-        if (string.IsNullOrWhiteSpace(languageId))
-        {
-            _underlyingRenderer.Write(renderer, codeBlock);
+            _underlyingCodeBlockRenderer.Write(renderer, codeBlock);
 
             return;
         }
 
-        var language = Languages.FindById(languageId);
+        var language = ExtractLanguage(fencedCodeBlock, fencedCodeBlockParser);
 
         if (language is null)
         {
-            _underlyingRenderer.Write(renderer, codeBlock);
+            _underlyingCodeBlockRenderer.Write(renderer, codeBlock);
 
             return;
         }
 
-        var code = ExtractSourceCode(codeBlock);
+        var code = ExtractCode(codeBlock);
         var formatter = new HtmlFormatter(_styleDictionary);
         var html = formatter.GetHtmlString(code, language);
 
         renderer.Write(html);
     }
 
-    private static string ExtractSourceCode(LeafBlock node)
+    private static ILanguage? ExtractLanguage(IFencedBlock fencedCodeBlock, FencedCodeBlockParser parser)
+    {
+        var languageId = fencedCodeBlock.Info!.Replace(parser.InfoPrefix!, string.Empty);
+
+        return string.IsNullOrWhiteSpace(languageId) ? null : Languages.FindById(languageId);
+    }
+
+    private static string ExtractCode(LeafBlock leafBlock)
     {
         var code = new StringBuilder();
-        var lines = node.Lines.Lines;
+        var lines = leafBlock.Lines.Lines;
         var totalLines = lines.Length;
 
         for (var index = 0; index < totalLines; index++)
