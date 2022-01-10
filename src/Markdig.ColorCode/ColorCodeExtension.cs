@@ -21,7 +21,9 @@ public class ColorCodeExtension : IMarkdownExtension
     /// Setups this extension for the specified pipeline.
     /// </summary>
     /// <param name="pipeline">The pipeline.</param>
-    public void Setup(MarkdownPipelineBuilder pipeline) { }
+    public void Setup(MarkdownPipelineBuilder pipeline)
+    {
+    }
 
     /// <summary>
     /// Setups this extension for the specified renderer.
