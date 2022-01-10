@@ -18,6 +18,7 @@
 	<PackageTags>markdig;markdown;html;colorcode;colorize;highlight;renderer</PackageTags>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	<PackageIcon>icon.png</PackageIcon>
+	<PackageId>Markdig.Colorizer</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
