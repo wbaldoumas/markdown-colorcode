@@ -80,6 +80,14 @@ end
 That was some **code**.
 ";
 
+    private const string MarkdownWithoutFencedCodeBlock = @"
+# Here is a header
+
+`var test = 123456789;`
+
+That was some **code**.
+";
+
     private readonly MarkdownPipeline _pipeline = new MarkdownPipelineBuilder()
         .UseAdvancedExtensions()
         .UseColorCode()
@@ -134,5 +142,22 @@ That was some **code**.
         htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
 
         html.Should().ContainAll("pre", "code", "capitalize");
+    }
+
+    [Test]
+    public void When_markdown_without_fenced_code_block_is_passed_valid_html_is_generated()
+    {
+        // act
+        var html = Markdown.ToHtml(MarkdownWithoutFencedCodeBlock, _pipeline);
+
+        // assert
+        html.Should().NotBeNull("because an html string was properly generated");
+
+        var htmlDocument = new HtmlDocument();
+        htmlDocument.LoadHtml(html);
+
+        htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
+
+        html.Should().ContainAll("code", "var test = 123456789;");
     }
 }
