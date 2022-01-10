@@ -1,13 +1,23 @@
 {
-  "api/Markdig.ColorCode.Foo.html": {
-    "href": "api/Markdig.ColorCode.Foo.html",
-    "title": "Class Foo | Markdig.ColorCode",
-    "keywords": "Class Foo Just a temporary mock class to aid in bootstrapping the library. Inheritance Object Foo Namespace : Markdig.ColorCode Assembly : Markdig.ColorCode.dll Syntax public class Foo : object Methods | Improve this Doc View Source Bar() Just a temporary mock method to aid in bootstrapping the library. Declaration public string Bar() Returns Type Description String Bar"
+  "api/Markdig.ColorCode.ColorCodeBlockRenderer.html": {
+    "href": "api/Markdig.ColorCode.ColorCodeBlockRenderer.html",
+    "title": "Class ColorCodeBlockRenderer | Markdig.ColorCode",
+    "keywords": "Class ColorCodeBlockRenderer An which colorizes code blocks. Inheritance Object ColorCodeBlockRenderer Namespace : Markdig.ColorCode Assembly : Markdig.ColorCode.dll Syntax public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock> Constructors | Improve this Doc View Source ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary) Create a new ColorCodeBlockRenderer with the specified underlyingCodeBlockRenderer and styleDictionary . Declaration public ColorCodeBlockRenderer(CodeBlockRenderer underlyingCodeBlockRenderer, StyleDictionary styleDictionary) Parameters Type Name Description CodeBlockRenderer underlyingCodeBlockRenderer The underlying to handle unsupported languages. StyleDictionary styleDictionary A for custom styling. Methods | Improve this Doc View Source Write(HtmlRenderer, CodeBlock) Writes the specified to the renderer . Declaration protected override void Write(HtmlRenderer renderer, CodeBlock codeBlock) Parameters Type Name Description HtmlRenderer renderer The renderer. CodeBlock codeBlock The code block to render."
+  },
+  "api/Markdig.ColorCode.ColorCodeExtension.html": {
+    "href": "api/Markdig.ColorCode.ColorCodeExtension.html",
+    "title": "Class ColorCodeExtension | Markdig.ColorCode",
+    "keywords": "Class ColorCodeExtension An extension which colorizes code. Inheritance Object ColorCodeExtension Namespace : Markdig.ColorCode Assembly : Markdig.ColorCode.dll Syntax public class ColorCodeExtension : IMarkdownExtension Constructors | Improve this Doc View Source ColorCodeExtension(StyleDictionary) Creates a new ColorCodeExtension with the specified styleDictionary . Declaration public ColorCodeExtension(StyleDictionary styleDictionary) Parameters Type Name Description StyleDictionary styleDictionary A dictionary indicating how to style the code. Methods | Improve this Doc View Source Setup(MarkdownPipeline, IMarkdownRenderer) Setups this extension for the specified renderer. Declaration public void Setup(MarkdownPipeline pipeline, IMarkdownRenderer renderer) Parameters Type Name Description MarkdownPipeline pipeline The pipeline used to parse the document. IMarkdownRenderer renderer The renderer. | Improve this Doc View Source Setup(MarkdownPipelineBuilder) Setups this extension for the specified pipeline. Declaration public void Setup(MarkdownPipelineBuilder pipeline) Parameters Type Name Description MarkdownPipelineBuilder pipeline The pipeline."
   },
   "api/Markdig.ColorCode.html": {
     "href": "api/Markdig.ColorCode.html",
     "title": "Namespace Markdig.ColorCode | Markdig.ColorCode",
-    "keywords": "Namespace Markdig.ColorCode Classes Foo Just a temporary mock class to aid in bootstrapping the library."
+    "keywords": "Namespace Markdig.ColorCode Classes ColorCodeBlockRenderer An which colorizes code blocks. ColorCodeExtension An extension which colorizes code. MarkdownPipelineBuilderExtensions Extensions for adding ColorCode to Markdig."
+  },
+  "api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.html": {
+    "href": "api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.html",
+    "title": "Class MarkdownPipelineBuilderExtensions | Markdig.ColorCode",
+    "keywords": "Class MarkdownPipelineBuilderExtensions Extensions for adding ColorCode to Markdig. Inheritance Object MarkdownPipelineBuilderExtensions Namespace : Markdig.ColorCode Assembly : Markdig.ColorCode.dll Syntax public static class MarkdownPipelineBuilderExtensions : object Methods | Improve this Doc View Source UseColorCode(MarkdownPipelineBuilder, Nullable<StyleDictionary>) Use ColorCode to apply code colorization. Declaration public static MarkdownPipelineBuilder UseColorCode(this MarkdownPipelineBuilder pipeline, StyleDictionary? styleDictionary = null) Parameters Type Name Description MarkdownPipelineBuilder pipeline The pipeline the ColorCode extension is being added to. Nullable < StyleDictionary > styleDictionary An optional for custom styling. Returns Type Description MarkdownPipelineBuilder The with the added ColorCode extension."
   },
   "index.html": {
     "href": "index.html",

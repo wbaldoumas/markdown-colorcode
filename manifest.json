@@ -14,11 +14,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../site/yml/api/Markdig.ColorCode.Foo.yml",
+      "source_relative_path": "../site/yml/api/Markdig.ColorCode.ColorCodeBlockRenderer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Markdig.ColorCode.Foo.html",
-          "hash": "AMuqa2LM6eEUcMsYAqxgJg=="
+          "relative_path": "api/Markdig.ColorCode.ColorCodeBlockRenderer.html",
+          "hash": "3qnFVQEBPRjj9LCoQQR8gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/Markdig.ColorCode.ColorCodeExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Markdig.ColorCode.ColorCodeExtension.html",
+          "hash": "wRwlBlQm/oqwMOZ2GvXUyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.html",
+          "hash": "qgehMnSaFjEwEXjSfWdFKA=="
         }
       },
       "is_incremental": false,
@@ -30,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Markdig.ColorCode.html",
-          "hash": "8huOfEcVsiuLhnf8sXKc8g=="
+          "hash": "eOarcE+U5cJHMtFQDumGYQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "aA+h68W20xY6grjCVwVyag=="
+          "hash": "0VT+T3pNeCiZZZ5Xns1dOQ=="
         }
       },
       "is_incremental": false,
@@ -93,7 +117,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 2,
+          "total_file_count": 4,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

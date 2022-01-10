@@ -7,22 +7,95 @@ references:
   commentId: N:Markdig.ColorCode
   fullName: Markdig.ColorCode
   nameWithType: Markdig.ColorCode
-- uid: Markdig.ColorCode.Foo
-  name: Foo
-  href: api/Markdig.ColorCode.Foo.html
-  commentId: T:Markdig.ColorCode.Foo
-  fullName: Markdig.ColorCode.Foo
-  nameWithType: Foo
-- uid: Markdig.ColorCode.Foo.Bar
-  name: Bar()
-  href: api/Markdig.ColorCode.Foo.html#Markdig_ColorCode_Foo_Bar
-  commentId: M:Markdig.ColorCode.Foo.Bar
-  fullName: Markdig.ColorCode.Foo.Bar()
-  nameWithType: Foo.Bar()
-- uid: Markdig.ColorCode.Foo.Bar*
-  name: Bar
-  href: api/Markdig.ColorCode.Foo.html#Markdig_ColorCode_Foo_Bar_
-  commentId: Overload:Markdig.ColorCode.Foo.Bar
+- uid: Markdig.ColorCode.ColorCodeBlockRenderer
+  name: ColorCodeBlockRenderer
+  href: api/Markdig.ColorCode.ColorCodeBlockRenderer.html
+  commentId: T:Markdig.ColorCode.ColorCodeBlockRenderer
+  fullName: Markdig.ColorCode.ColorCodeBlockRenderer
+  nameWithType: ColorCodeBlockRenderer
+- uid: Markdig.ColorCode.ColorCodeBlockRenderer.#ctor(CodeBlockRenderer,StyleDictionary)
+  name: ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary)
+  href: api/Markdig.ColorCode.ColorCodeBlockRenderer.html#Markdig_ColorCode_ColorCodeBlockRenderer__ctor_CodeBlockRenderer_StyleDictionary_
+  commentId: M:Markdig.ColorCode.ColorCodeBlockRenderer.#ctor(CodeBlockRenderer,StyleDictionary)
+  fullName: Markdig.ColorCode.ColorCodeBlockRenderer.ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary)
+  nameWithType: ColorCodeBlockRenderer.ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary)
+- uid: Markdig.ColorCode.ColorCodeBlockRenderer.#ctor*
+  name: ColorCodeBlockRenderer
+  href: api/Markdig.ColorCode.ColorCodeBlockRenderer.html#Markdig_ColorCode_ColorCodeBlockRenderer__ctor_
+  commentId: Overload:Markdig.ColorCode.ColorCodeBlockRenderer.#ctor
   isSpec: "True"
-  fullName: Markdig.ColorCode.Foo.Bar
-  nameWithType: Foo.Bar
+  fullName: Markdig.ColorCode.ColorCodeBlockRenderer.ColorCodeBlockRenderer
+  nameWithType: ColorCodeBlockRenderer.ColorCodeBlockRenderer
+- uid: Markdig.ColorCode.ColorCodeBlockRenderer.Write(HtmlRenderer,CodeBlock)
+  name: Write(HtmlRenderer, CodeBlock)
+  href: api/Markdig.ColorCode.ColorCodeBlockRenderer.html#Markdig_ColorCode_ColorCodeBlockRenderer_Write_HtmlRenderer_CodeBlock_
+  commentId: M:Markdig.ColorCode.ColorCodeBlockRenderer.Write(HtmlRenderer,CodeBlock)
+  fullName: Markdig.ColorCode.ColorCodeBlockRenderer.Write(HtmlRenderer, CodeBlock)
+  nameWithType: ColorCodeBlockRenderer.Write(HtmlRenderer, CodeBlock)
+- uid: Markdig.ColorCode.ColorCodeBlockRenderer.Write*
+  name: Write
+  href: api/Markdig.ColorCode.ColorCodeBlockRenderer.html#Markdig_ColorCode_ColorCodeBlockRenderer_Write_
+  commentId: Overload:Markdig.ColorCode.ColorCodeBlockRenderer.Write
+  isSpec: "True"
+  fullName: Markdig.ColorCode.ColorCodeBlockRenderer.Write
+  nameWithType: ColorCodeBlockRenderer.Write
+- uid: Markdig.ColorCode.ColorCodeExtension
+  name: ColorCodeExtension
+  href: api/Markdig.ColorCode.ColorCodeExtension.html
+  commentId: T:Markdig.ColorCode.ColorCodeExtension
+  fullName: Markdig.ColorCode.ColorCodeExtension
+  nameWithType: ColorCodeExtension
+- uid: Markdig.ColorCode.ColorCodeExtension.#ctor(StyleDictionary)
+  name: ColorCodeExtension(StyleDictionary)
+  href: api/Markdig.ColorCode.ColorCodeExtension.html#Markdig_ColorCode_ColorCodeExtension__ctor_StyleDictionary_
+  commentId: M:Markdig.ColorCode.ColorCodeExtension.#ctor(StyleDictionary)
+  fullName: Markdig.ColorCode.ColorCodeExtension.ColorCodeExtension(StyleDictionary)
+  nameWithType: ColorCodeExtension.ColorCodeExtension(StyleDictionary)
+- uid: Markdig.ColorCode.ColorCodeExtension.#ctor*
+  name: ColorCodeExtension
+  href: api/Markdig.ColorCode.ColorCodeExtension.html#Markdig_ColorCode_ColorCodeExtension__ctor_
+  commentId: Overload:Markdig.ColorCode.ColorCodeExtension.#ctor
+  isSpec: "True"
+  fullName: Markdig.ColorCode.ColorCodeExtension.ColorCodeExtension
+  nameWithType: ColorCodeExtension.ColorCodeExtension
+- uid: Markdig.ColorCode.ColorCodeExtension.Setup(MarkdownPipeline,IMarkdownRenderer)
+  name: Setup(MarkdownPipeline, IMarkdownRenderer)
+  href: api/Markdig.ColorCode.ColorCodeExtension.html#Markdig_ColorCode_ColorCodeExtension_Setup_MarkdownPipeline_IMarkdownRenderer_
+  commentId: M:Markdig.ColorCode.ColorCodeExtension.Setup(MarkdownPipeline,IMarkdownRenderer)
+  fullName: Markdig.ColorCode.ColorCodeExtension.Setup(MarkdownPipeline, IMarkdownRenderer)
+  nameWithType: ColorCodeExtension.Setup(MarkdownPipeline, IMarkdownRenderer)
+- uid: Markdig.ColorCode.ColorCodeExtension.Setup(MarkdownPipelineBuilder)
+  name: Setup(MarkdownPipelineBuilder)
+  href: api/Markdig.ColorCode.ColorCodeExtension.html#Markdig_ColorCode_ColorCodeExtension_Setup_MarkdownPipelineBuilder_
+  commentId: M:Markdig.ColorCode.ColorCodeExtension.Setup(MarkdownPipelineBuilder)
+  fullName: Markdig.ColorCode.ColorCodeExtension.Setup(MarkdownPipelineBuilder)
+  nameWithType: ColorCodeExtension.Setup(MarkdownPipelineBuilder)
+- uid: Markdig.ColorCode.ColorCodeExtension.Setup*
+  name: Setup
+  href: api/Markdig.ColorCode.ColorCodeExtension.html#Markdig_ColorCode_ColorCodeExtension_Setup_
+  commentId: Overload:Markdig.ColorCode.ColorCodeExtension.Setup
+  isSpec: "True"
+  fullName: Markdig.ColorCode.ColorCodeExtension.Setup
+  nameWithType: ColorCodeExtension.Setup
+- uid: Markdig.ColorCode.MarkdownPipelineBuilderExtensions
+  name: MarkdownPipelineBuilderExtensions
+  href: api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.html
+  commentId: T:Markdig.ColorCode.MarkdownPipelineBuilderExtensions
+  fullName: Markdig.ColorCode.MarkdownPipelineBuilderExtensions
+  nameWithType: MarkdownPipelineBuilderExtensions
+- uid: Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder,System.Nullable{StyleDictionary})
+  name: UseColorCode(MarkdownPipelineBuilder, Nullable<StyleDictionary>)
+  href: api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.html#Markdig_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__
+  commentId: M:Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder,System.Nullable{StyleDictionary})
+  name.vb: UseColorCode(MarkdownPipelineBuilder, Nullable(Of StyleDictionary))
+  fullName: Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder, System.Nullable<StyleDictionary>)
+  fullName.vb: Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder, System.Nullable(Of StyleDictionary))
+  nameWithType: MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder, Nullable<StyleDictionary>)
+  nameWithType.vb: MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder, Nullable(Of StyleDictionary))
+- uid: Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode*
+  name: UseColorCode
+  href: api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.html#Markdig_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_
+  commentId: Overload:Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode
+  isSpec: "True"
+  fullName: Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode
+  nameWithType: MarkdownPipelineBuilderExtensions.UseColorCode

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Foo
+    <title>Class MarkdownPipelineBuilderExtensions
    | Markdig.ColorCode </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Foo
+    <meta name="title" content="Class MarkdownPipelineBuilderExtensions
    | Markdig.ColorCode ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -78,43 +78,67 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Markdig.ColorCode.Foo">
+            <article class="content wrap" id="_content" data-uid="Markdig.ColorCode.MarkdownPipelineBuilderExtensions">
   
   
-  <h1 id="Markdig_ColorCode_Foo" data-uid="Markdig.ColorCode.Foo" class="text-break">Class Foo
+  <h1 id="Markdig_ColorCode_MarkdownPipelineBuilderExtensions" data-uid="Markdig.ColorCode.MarkdownPipelineBuilderExtensions" class="text-break">Class MarkdownPipelineBuilderExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Just a temporary mock class to aid in bootstrapping the library.</p>
+  <div class="markdown level0 summary"><p>Extensions for adding ColorCode to Markdig.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">Foo</span></div>
+    <div class="level1"><span class="xref">MarkdownPipelineBuilderExtensions</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Markdig.ColorCode.html">Markdig.ColorCode</a></h6>
   <h6><strong>Assembly</strong>: Markdig.ColorCode.dll</h6>
-  <h5 id="Markdig_ColorCode_Foo_syntax">Syntax</h5>
+  <h5 id="Markdig_ColorCode_MarkdownPipelineBuilderExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Foo : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class MarkdownPipelineBuilderExtensions : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/wbaldoumas/markdig-colorcode/new/main/apiSpec/new?filename=Markdig_ColorCode_Foo_Bar.md&amp;value=---%0Auid%3A%20Markdig.ColorCode.Foo.Bar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/wbaldoumas/markdig-colorcode/new/main/apiSpec/new?filename=Markdig_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__.md&amp;value=---%0Auid%3A%20Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder%2CSystem.Nullable%7BStyleDictionary%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/wbaldoumas/markdig-colorcode/blob/main/src/Markdig.ColorCode/Foo.cs/#L12">View Source</a>
+    <a href="https://github.com/wbaldoumas/markdig-colorcode/blob/main/src/Markdig.ColorCode/MarkdownPipelineBuilderExtensions.cs/#L16">View Source</a>
   </span>
-  <a id="Markdig_ColorCode_Foo_Bar_" data-uid="Markdig.ColorCode.Foo.Bar*"></a>
-  <h4 id="Markdig_ColorCode_Foo_Bar" data-uid="Markdig.ColorCode.Foo.Bar">Bar()</h4>
-  <div class="markdown level1 summary"><p>Just a temporary mock method to aid in bootstrapping the library.</p>
+  <a id="Markdig_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_" data-uid="Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode*"></a>
+  <h4 id="Markdig_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__" data-uid="Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder,System.Nullable{StyleDictionary})">UseColorCode(MarkdownPipelineBuilder, Nullable&lt;StyleDictionary&gt;)</h4>
+  <div class="markdown level1 summary"><p>Use ColorCode to apply code colorization.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Bar()</code></pre>
+    <pre><code class="lang-csharp hljs">public static MarkdownPipelineBuilder UseColorCode(this MarkdownPipelineBuilder pipeline, StyleDictionary? styleDictionary = null)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MarkdownPipelineBuilder</span></td>
+        <td><span class="parametername">pipeline</span></td>
+        <td><p>The pipeline the ColorCode extension is being added to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">StyleDictionary</span>&gt;</td>
+        <td><span class="parametername">styleDictionary</span></td>
+        <td><p>An optional <see cref="!:StyleDictionary"></see> for custom styling.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -125,8 +149,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>Bar</p>
+        <td><span class="xref">MarkdownPipelineBuilder</span></td>
+        <td><p>The <see cref="!:MarkdownPipelineBuilder"></see> with the added ColorCode extension.</p>
 </td>
       </tr>
     </tbody>
@@ -139,10 +163,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/wbaldoumas/markdig-colorcode/new/main/apiSpec/new?filename=Markdig_ColorCode_Foo.md&amp;value=---%0Auid%3A%20Markdig.ColorCode.Foo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/wbaldoumas/markdig-colorcode/new/main/apiSpec/new?filename=Markdig_ColorCode_MarkdownPipelineBuilderExtensions.md&amp;value=---%0Auid%3A%20Markdig.ColorCode.MarkdownPipelineBuilderExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/wbaldoumas/markdig-colorcode/blob/main/src/Markdig.ColorCode/Foo.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/wbaldoumas/markdig-colorcode/blob/main/src/Markdig.ColorCode/MarkdownPipelineBuilderExtensions.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
