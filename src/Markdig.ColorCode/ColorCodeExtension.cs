@@ -32,32 +32,27 @@ public class ColorCodeExtension : IMarkdownExtension
     /// <param name="renderer">The renderer.</param>
     public void Setup(MarkdownPipeline pipeline, IMarkdownRenderer renderer)
     {
-        switch (renderer)
+        if (renderer is not TextRendererBase<HtmlRenderer> htmlRenderer)
         {
-            case null:
-                throw new ArgumentNullException(nameof(renderer));
-            case TextRendererBase<HtmlRenderer> htmlRenderer:
-            {
-                var codeBlockRenderer = htmlRenderer.ObjectRenderers.FindExact<CodeBlockRenderer>();
-
-                if (codeBlockRenderer != null)
-                {
-                    htmlRenderer.ObjectRenderers.Remove(codeBlockRenderer);
-                }
-                else
-                {
-                    codeBlockRenderer = new CodeBlockRenderer();
-                }
-
-                htmlRenderer.ObjectRenderers.AddIfNotAlready(
-                    new ColorCodeBlockRenderer(
-                        codeBlockRenderer,
-                        _styleDictionary
-                    )
-                );
-
-                break;
-            }
+            return;
         }
+
+        var codeBlockRenderer = htmlRenderer.ObjectRenderers.FindExact<CodeBlockRenderer>();
+
+        if (codeBlockRenderer != null)
+        {
+            htmlRenderer.ObjectRenderers.Remove(codeBlockRenderer);
+        }
+        else
+        {
+            codeBlockRenderer = new CodeBlockRenderer();
+        }
+
+        htmlRenderer.ObjectRenderers.AddIfNotAlready(
+            new ColorCodeBlockRenderer(
+                codeBlockRenderer,
+                _styleDictionary
+            )
+        );
     }
 }
