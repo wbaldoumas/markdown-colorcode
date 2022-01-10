@@ -40,10 +40,18 @@ public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
             return;
         }
 
-        var languageCode = fencedCodeBlock.Info!.Replace(parser.InfoPrefix!, string.Empty);
-        var language = Languages.FindById(languageCode);
+        var languageId = fencedCodeBlock.Info!.Replace(parser.InfoPrefix!, string.Empty);
 
-        if (string.IsNullOrWhiteSpace(languageCode))
+        if (string.IsNullOrWhiteSpace(languageId))
+        {
+            _underlyingRenderer.Write(renderer, codeBlock);
+
+            return;
+        }
+
+        var language = Languages.FindById(languageId);
+
+        if (language is null)
         {
             _underlyingRenderer.Write(renderer, codeBlock);
 
