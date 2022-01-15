@@ -2,7 +2,7 @@ name: Build and Deploy Documentation
 
 on:
   push:
-    branches: [ nuget_packaging ]
+    branches: [ main ]
 
 jobs:
   deploy-docs:
