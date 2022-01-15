@@ -9,7 +9,7 @@ using System.Text;
 namespace Markdown.ColorCode;
 
 /// <summary>
-///     A renderer which colorizes code blocks.
+///     A renderer which colorizes code blocks using ColorCode.
 /// </summary>
 public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
 {

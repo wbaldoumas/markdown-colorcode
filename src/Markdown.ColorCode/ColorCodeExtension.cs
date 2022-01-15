@@ -6,7 +6,7 @@ using Markdig.Renderers.Html;
 namespace Markdown.ColorCode;
 
 /// <summary>
-///     An extension which colorizes code.
+///     A Markdig extension which colorizes code using ColorCode.
 /// </summary>
 public class ColorCodeExtension : IMarkdownExtension
 {
