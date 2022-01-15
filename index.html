@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Markdig.ColorCode | Markdig.ColorCode </title>
+    <title>Markdown.ColorCode | Markdown.ColorCode </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Markdig.ColorCode | Markdig.ColorCode ">
+    <meta name="title" content="Markdown.ColorCode | Markdown.ColorCode ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -70,10 +70,69 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="markdigcolorcode">Markdig.ColorCode</h1>
+<h1 id="markdowncolorcode">Markdown.ColorCode</h1>
 
-<p>An extension for Markdig that adds syntax highlighting to code through the power of ColorCode.</p>
-<p>See API documentation for detailed information.</p>
+<h2 id="about-the-project">About The Project</h2>
+<p>An extension for <a href="https://github.com/xoofx/markdig">Markdig</a> that adds syntax highlighting to code through the power of <a href="https://github.com/CommunityToolkit/ColorCode-Universal">ColorCode</a>.</p>
+<h2 id="demonstration">Demonstration</h2>
+<h3 id="before">Before</h3>
+<pre><code>using Foo.Bar.Baz;
+
+namespace Foo.Api;
+
+public interface FooService {
+    /// &lt;summary&gt;
+    ///     Gets a new Foo!
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;A new Foo&lt;/returns&gt;
+    public void GetFoo() {
+        return new Foo();
+    }
+}
+</code></pre>
+<h3 id="after">After</h3>
+<pre><code class="lang-csharp">using Foo.Bar.Baz;
+
+namespace Foo.Api;
+
+public interface FooService {
+    /// &lt;summary&gt;
+    ///     Gets a new Foo!
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;A new Foo&lt;/returns&gt;
+    public void GetFoo() {
+        return new Foo();
+    }
+}
+</code></pre>
+<h2 id="installation">Installation</h2>
+<h3 id="package-manager">Package Manager</h3>
+<pre><code>Install-Package Markdown.ColorCode -Version 0.1.0
+</code></pre>
+<h3 id="net-cli">.NET CLI</h3>
+<pre><code>dotnet add package Markdown.ColorCode --version 0.1.0
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>To use this extension with <a href="https://github.com/xoofx/markdig">Markdig</a>, simply install the <code>Markdown.ColorCode</code> package use the ColorCode extension:</p>
+<pre><code class="lang-cs">var pipeline = new MarkdownPipelineBuilder()
+    .UseAdvancedExtensions()
+    .UseColorCode()
+    .Build();
+
+var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
+</code></pre>
+<h2 id="roadmap">Roadmap</h2>
+<p>See the <a href="https://github.com/wbaldoumas/markdown-colorcode/issues">open issues</a> for a list of proposed features (and known issues).</p>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are <strong>greatly appreciated</strong>. For detailed contributing guidelines, please see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+<h2 id="license">License</h2>
+<p>Distributed under the <code>MIT License</code> License. See <code>LICENSE</code> for more information.</p>
+<h2 id="contact">Contact</h2>
+<p><a href="https://github.com/wbaldoumas">@wbaldoumas</a></p>
+<p>Project Link: <a href="https://github.com/wbaldoumas/markdown-colorcode">https://github.com/wbaldoumas/markdown-colorcode</a></p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>This <code>README</code> was adapted from
+<a href="https://github.com/othneildrew/Best-README-Template">https://github.com/othneildrew/Best-README-Template</a>.</p>
 </article>
           </div>
           
@@ -82,7 +141,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/wbaldoumas/markdig-colorcode/blob/main/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/wbaldoumas/markdown-colorcode/blob/nuget_packaging/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

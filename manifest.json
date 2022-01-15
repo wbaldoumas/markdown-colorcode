@@ -14,11 +14,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../site/yml/api/Markdig.ColorCode.ColorCodeBlockRenderer.yml",
+      "source_relative_path": "../site/yml/api/Markdown.ColorCode.ColorCodeBlockRenderer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Markdig.ColorCode.ColorCodeBlockRenderer.html",
-          "hash": "3qnFVQEBPRjj9LCoQQR8gg=="
+          "relative_path": "api/Markdown.ColorCode.ColorCodeBlockRenderer.html",
+          "hash": "K3+YcLdCIEBsdSXpgf+4Zw=="
         }
       },
       "is_incremental": false,
@@ -26,11 +26,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../site/yml/api/Markdig.ColorCode.ColorCodeExtension.yml",
+      "source_relative_path": "../site/yml/api/Markdown.ColorCode.ColorCodeExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Markdig.ColorCode.ColorCodeExtension.html",
-          "hash": "wRwlBlQm/oqwMOZ2GvXUyQ=="
+          "relative_path": "api/Markdown.ColorCode.ColorCodeExtension.html",
+          "hash": "1sW1diasjwGHLXOFaprHng=="
         }
       },
       "is_incremental": false,
@@ -38,11 +38,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../site/yml/api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.yml",
+      "source_relative_path": "../site/yml/api/Markdown.ColorCode.MarkdownPipelineBuilderExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Markdig.ColorCode.MarkdownPipelineBuilderExtensions.html",
-          "hash": "qgehMnSaFjEwEXjSfWdFKA=="
+          "relative_path": "api/Markdown.ColorCode.MarkdownPipelineBuilderExtensions.html",
+          "hash": "Kd8z2EHtkEhpM4s7yjiorA=="
         }
       },
       "is_incremental": false,
@@ -50,11 +50,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../site/yml/api/Markdig.ColorCode.yml",
+      "source_relative_path": "../site/yml/api/Markdown.ColorCode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Markdig.ColorCode.html",
-          "hash": "eOarcE+U5cJHMtFQDumGYQ=="
+          "relative_path": "api/Markdown.ColorCode.html",
+          "hash": "IwAHGuxhgiyYW5nx6MfNMA=="
         }
       },
       "is_incremental": false,
@@ -66,19 +66,22 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "0VT+T3pNeCiZZZ5Xns1dOQ=="
+          "hash": "rOLkBi0C+8Fm1bYuAQPdaA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "+/vNqx7JTz93AghBPoQihw=="
+          "hash": "IdC4fJA9en9VPNJOapF60A=="
         }
       },
       "is_incremental": false,
@@ -90,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "jy39eG9vQ0XVk4HRf9o+jA=="
+          "hash": "3rJU0hQcE+s0Ws5sRlYL/w=="
         }
       },
       "is_incremental": false,

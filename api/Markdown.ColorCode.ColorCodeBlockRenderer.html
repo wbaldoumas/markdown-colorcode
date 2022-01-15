@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MarkdownPipelineBuilderExtensions
-   | Markdig.ColorCode </title>
+    <title>Class ColorCodeBlockRenderer
+   | Markdown.ColorCode </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MarkdownPipelineBuilderExtensions
-   | Markdig.ColorCode ">
+    <meta name="title" content="Class ColorCodeBlockRenderer
+   | Markdown.ColorCode ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -78,42 +78,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Markdig.ColorCode.MarkdownPipelineBuilderExtensions">
+            <article class="content wrap" id="_content" data-uid="Markdown.ColorCode.ColorCodeBlockRenderer">
   
   
-  <h1 id="Markdig_ColorCode_MarkdownPipelineBuilderExtensions" data-uid="Markdig.ColorCode.MarkdownPipelineBuilderExtensions" class="text-break">Class MarkdownPipelineBuilderExtensions
+  <h1 id="Markdown_ColorCode_ColorCodeBlockRenderer" data-uid="Markdown.ColorCode.ColorCodeBlockRenderer" class="text-break">Class ColorCodeBlockRenderer
   </h1>
-  <div class="markdown level0 summary"><p>Extensions for adding ColorCode to Markdig.</p>
+  <div class="markdown level0 summary"><p>A renderer which colorizes code blocks.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">MarkdownPipelineBuilderExtensions</span></div>
+    <div class="level1"><span class="xref">ColorCodeBlockRenderer</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Markdig.ColorCode.html">Markdig.ColorCode</a></h6>
-  <h6><strong>Assembly</strong>: Markdig.ColorCode.dll</h6>
-  <h5 id="Markdig_ColorCode_MarkdownPipelineBuilderExtensions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Markdown.ColorCode.html">Markdown.ColorCode</a></h6>
+  <h6><strong>Assembly</strong>: Markdown.ColorCode.dll</h6>
+  <h5 id="Markdown_ColorCode_ColorCodeBlockRenderer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class MarkdownPipelineBuilderExtensions : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class ColorCodeBlockRenderer : HtmlObjectRenderer&lt;CodeBlock&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/wbaldoumas/markdig-colorcode/new/main/apiSpec/new?filename=Markdig_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__.md&amp;value=---%0Auid%3A%20Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder%2CSystem.Nullable%7BStyleDictionary%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/wbaldoumas/markdown-colorcode/new/nuget_packaging/apiSpec/new?filename=Markdown_ColorCode_ColorCodeBlockRenderer__ctor_CodeBlockRenderer_StyleDictionary_.md&amp;value=---%0Auid%3A%20Markdown.ColorCode.ColorCodeBlockRenderer.%23ctor(CodeBlockRenderer%2CStyleDictionary)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/wbaldoumas/markdig-colorcode/blob/main/src/Markdig.ColorCode/MarkdownPipelineBuilderExtensions.cs/#L16">View Source</a>
+    <a href="https://github.com/wbaldoumas/markdown-colorcode/blob/nuget_packaging/src/Markdown.ColorCode/ColorCodeBlockRenderer.cs/#L24">View Source</a>
   </span>
-  <a id="Markdig_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_" data-uid="Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode*"></a>
-  <h4 id="Markdig_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__" data-uid="Markdig.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder,System.Nullable{StyleDictionary})">UseColorCode(MarkdownPipelineBuilder, Nullable&lt;StyleDictionary&gt;)</h4>
-  <div class="markdown level1 summary"><p>Use ColorCode to apply code colorization.</p>
+  <a id="Markdown_ColorCode_ColorCodeBlockRenderer__ctor_" data-uid="Markdown.ColorCode.ColorCodeBlockRenderer.#ctor*"></a>
+  <h4 id="Markdown_ColorCode_ColorCodeBlockRenderer__ctor_CodeBlockRenderer_StyleDictionary_" data-uid="Markdown.ColorCode.ColorCodeBlockRenderer.#ctor(CodeBlockRenderer,StyleDictionary)">ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary)</h4>
+  <div class="markdown level1 summary"><p>Create a new <a class="xref" href="Markdown.ColorCode.ColorCodeBlockRenderer.html">ColorCodeBlockRenderer</a> with the specified <code data-dev-comment-type="paramref" class="paramref">underlyingCodeBlockRenderer</code> and <code data-dev-comment-type="paramref" class="paramref">styleDictionary</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MarkdownPipelineBuilder UseColorCode(this MarkdownPipelineBuilder pipeline, StyleDictionary? styleDictionary = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ColorCodeBlockRenderer(CodeBlockRenderer underlyingCodeBlockRenderer, StyleDictionary styleDictionary)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,31 +126,57 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">MarkdownPipelineBuilder</span></td>
-        <td><span class="parametername">pipeline</span></td>
-        <td><p>The pipeline the ColorCode extension is being added to.</p>
+        <td><span class="xref">CodeBlockRenderer</span></td>
+        <td><span class="parametername">underlyingCodeBlockRenderer</span></td>
+        <td><p>The underlying CodeBlockRenderer to handle unsupported languages.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">StyleDictionary</span>&gt;</td>
+        <td><span class="xref">StyleDictionary</span></td>
         <td><span class="parametername">styleDictionary</span></td>
-        <td><p>An optional <see cref="!:StyleDictionary"></see> for custom styling.</p>
+        <td><p>A StyleDictionary for custom styling.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wbaldoumas/markdown-colorcode/new/nuget_packaging/apiSpec/new?filename=Markdown_ColorCode_ColorCodeBlockRenderer_Write_HtmlRenderer_CodeBlock_.md&amp;value=---%0Auid%3A%20Markdown.ColorCode.ColorCodeBlockRenderer.Write(HtmlRenderer%2CCodeBlock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wbaldoumas/markdown-colorcode/blob/nuget_packaging/src/Markdown.ColorCode/ColorCodeBlockRenderer.cs/#L35">View Source</a>
+  </span>
+  <a id="Markdown_ColorCode_ColorCodeBlockRenderer_Write_" data-uid="Markdown.ColorCode.ColorCodeBlockRenderer.Write*"></a>
+  <h4 id="Markdown_ColorCode_ColorCodeBlockRenderer_Write_HtmlRenderer_CodeBlock_" data-uid="Markdown.ColorCode.ColorCodeBlockRenderer.Write(HtmlRenderer,CodeBlock)">Write(HtmlRenderer, CodeBlock)</h4>
+  <div class="markdown level1 summary"><p>Writes the specified <code data-dev-comment-type="paramref" class="paramref">codeBlock</code> to the <code data-dev-comment-type="paramref" class="paramref">renderer</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Write(HtmlRenderer renderer, CodeBlock codeBlock)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">MarkdownPipelineBuilder</span></td>
-        <td><p>The <see cref="!:MarkdownPipelineBuilder"></see> with the added ColorCode extension.</p>
+        <td><span class="xref">HtmlRenderer</span></td>
+        <td><span class="parametername">renderer</span></td>
+        <td><p>The renderer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CodeBlock</span></td>
+        <td><span class="parametername">codeBlock</span></td>
+        <td><p>The code block to render.</p>
 </td>
       </tr>
     </tbody>
@@ -163,10 +189,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/wbaldoumas/markdig-colorcode/new/main/apiSpec/new?filename=Markdig_ColorCode_MarkdownPipelineBuilderExtensions.md&amp;value=---%0Auid%3A%20Markdig.ColorCode.MarkdownPipelineBuilderExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/wbaldoumas/markdown-colorcode/new/nuget_packaging/apiSpec/new?filename=Markdown_ColorCode_ColorCodeBlockRenderer.md&amp;value=---%0Auid%3A%20Markdown.ColorCode.ColorCodeBlockRenderer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/wbaldoumas/markdig-colorcode/blob/main/src/Markdig.ColorCode/MarkdownPipelineBuilderExtensions.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/wbaldoumas/markdown-colorcode/blob/nuget_packaging/src/Markdown.ColorCode/ColorCodeBlockRenderer.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
