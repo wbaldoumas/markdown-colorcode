@@ -8,7 +8,7 @@ An extension for [Markdig](https://github.com/xoofx/markdig) that adds syntax hi
 
 ### Before
 
-```
+```text
 using Foo.Bar.Baz;
 
 namespace Foo.Api;
