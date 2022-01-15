@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: "Publish Release"
+      url: https://www.nuget.org/packages/Markdown.ColorCode/
     steps:
     - uses: actions/checkout@v2
 
