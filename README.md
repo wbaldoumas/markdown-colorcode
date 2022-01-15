@@ -1,4 +1,4 @@
-# Markdig.ColorCode
+# Markdown.ColorCode
 
 ## About The Project
 
@@ -6,7 +6,7 @@ An extension for Markdig that adds syntax highlighting to code through the power
 
 ## Roadmap
 
-See the [open issues](https://github.com/wbaldoumas/markdig-colorcode/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/wbaldoumas/markdown-colorcode/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -20,7 +20,7 @@ Distributed under the `MIT License` License. See `LICENSE` for more information.
 
 [@wbaldoumas](https://github.com/wbaldoumas)
 
-Project Link: [https://github.com/wbaldoumas/markdig-colorcode](https://github.com/wbaldoumas/markdig-colorcode)
+Project Link: [https://github.com/wbaldoumas/markdown-colorcode](https://github.com/wbaldoumas/markdown-colorcode)
 
 ## Acknowledgements
 

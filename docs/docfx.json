@@ -3,7 +3,7 @@
         {
             "src": [
                 {
-                    "files": ["**/Markdig.ColorCode.csproj"],
+                    "files": ["**/Markdown.ColorCode.csproj"],
                     "exclude": ["**/bin/**", "**/obj/**"],
                     "src": "../"
                 }
@@ -30,7 +30,7 @@
             "templates/material"
         ],
         "globalMetadata": {
-            "_appTitle": "Markdig.ColorCode",
+            "_appTitle": "Markdown.ColorCode",
             "_enableSearch": true
         },
         "markdownEngineName": "markdig",

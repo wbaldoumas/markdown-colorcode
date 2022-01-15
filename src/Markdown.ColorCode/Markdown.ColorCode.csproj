@@ -11,10 +11,10 @@
 	<Authors>William Baldoumas</Authors>
 	<Description>An extension for Markdig that adds syntax highlighting to code through the power of ColorCode.</Description>
 	<Copyright>Copyright ©2022 William Baldoumas</Copyright>
-	<PackageProjectUrl>https://wbaldoumas.github.io/markdig-colorcode/index.html</PackageProjectUrl>
+	<PackageProjectUrl>https://wbaldoumas.github.io/markdown-colorcode/index.html</PackageProjectUrl>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<RepositoryType>git</RepositoryType>
-	<RepositoryUrl>https://github.com/wbaldoumas/markdig-colorcode</RepositoryUrl>
+	<RepositoryUrl>https://github.com/wbaldoumas/markdown-colorcode</RepositoryUrl>
 	<PackageTags>markdig;markdown;html;colorcode;colorize;highlight;renderer</PackageTags>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	<PackageIcon>icon.png</PackageIcon>

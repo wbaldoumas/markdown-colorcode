@@ -1,6 +1,7 @@
 ﻿using ColorCode.Styling;
+using Markdig;
 
-namespace Markdig.ColorCode;
+namespace Markdown.ColorCode;
 
 /// <summary>
 ///     Extensions for adding ColorCode to Markdig.

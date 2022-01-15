@@ -6,7 +6,7 @@ var fs = require('fs');
 var yaml = require('js-yaml');
 var toc = yaml.load(fs.readFileSync('../site/yml/api/toc.yml'));
 
-var root = "Markdig.ColorCode";
+var root = "Markdown.ColorCode";
 var namespaces = {
     [root]: {}
 };

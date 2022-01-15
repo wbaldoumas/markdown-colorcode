@@ -1,6 +1,6 @@
 {
-    "name": "markdig-colorcode-docs",
-    "description": "Documentation generator for the Markdig.ColorCode C# package",
+    "name": "markdown-colorcode-docs",
+    "description": "Documentation generator for the Markdown.ColorCode C# package",
     "version": "1.0.0",
     "author": "",
     "dependencies": {

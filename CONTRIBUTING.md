@@ -1,6 +1,6 @@
 # How to Contribute
 
-Thanks for your interest in contributing to `Markdig.ColorCode`! Here are a few general guidelines on contributing and
+Thanks for your interest in contributing to `Markdown.ColorCode`! Here are a few general guidelines on contributing and
 reporting bugs that we ask you to review. Following these guidelines helps to communicate that you respect the time of
 the contributors managing and developing this open source project. In return, they should reciprocate that respect in
 addressing your issue, assessing changes, and helping you finalize your pull requests. In that spirit of mutual respect,
@@ -14,7 +14,7 @@ any real-time space (eg. Slack, Discord, etc).
 ## Reporting Issues
 
 Before reporting a new issue, please ensure that the issue was not already reported or fixed by searching through our
-[issues list](https://github.com/wbaldoumas/markdig-colorcode/issues).
+[issues list](https://github.com/wbaldoumas/markdown-colorcode/issues).
 
 When creating a new issue, please be sure to include a **title and clear description**, as much relevant information as
 possible, and, if possible, a test case.
@@ -32,16 +32,16 @@ reserve breaking changes until the next major version release.
 
 ## Other Ways to Contribute
 
-We welcome anyone that wants to contribute to `Markdig.ColorCode` to triage and reply to open issues to help troubleshoot
+We welcome anyone that wants to contribute to `Markdown.ColorCode` to triage and reply to open issues to help troubleshoot
 and fix existing bugs. Here is what you can do:
 
 - Help ensure that existing issues follows the recommendations from the _[Reporting Issues](#reporting-issues)_ section,
   providing feedback to the issue's author on what might be missing.
-- Review and update the existing content of our [Wiki](https://github.com/wbaldoumas/markdig-colorcode/wiki) with up-to-date
+- Review and update the existing content of our [Wiki](https://github.com/wbaldoumas/markdown-colorcode/wiki) with up-to-date
   instructions and code samples.
-- Review existing pull requests, and testing patches against real existing applications that use `Markdig.ColorCode`.
+- Review existing pull requests, and testing patches against real existing applications that use `Markdown.ColorCode`.
 - Write a test, or add a missing test case to an existing test.
 
-Thanks again for your interest on contributing to `Markdig.ColorCode`!
+Thanks again for your interest on contributing to `Markdown.ColorCode`!
 
 :heart:

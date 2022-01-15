@@ -1,8 +1,9 @@
 ﻿using FluentAssertions;
 using HtmlAgilityPack;
+using Markdig;
 using NUnit.Framework;
 
-namespace Markdig.ColorCode.UnitTests;
+namespace Markdown.ColorCode.UnitTests;
 
 [TestFixture]
 public class ColorCodeBlockRendererTests
@@ -11,7 +12,7 @@ public class ColorCodeBlockRendererTests
 # Here is a header
 
 ```csharp
-namespace Markdig.ColorCode;
+namespace Markdown.ColorCode;
 
 /// <summary>
 ///     Just a temporary mock class to aid in bootstrapping the library.
@@ -40,7 +41,7 @@ That was some **code**.
 # Here is a header
 
 ```
-namespace Markdig.ColorCode;
+namespace Markdown.ColorCode;
 
 /// <summary>
 ///     Just a temporary mock class to aid in bootstrapping the library.
@@ -97,7 +98,7 @@ That was some **code**.
     public void When_markdown_with_specified_language_is_passed_valid_html_is_generated()
     {
         // act
-        var html = Markdown.ToHtml(MarkdownWithLanguage, _pipeline);
+        var html = Markdig.Markdown.ToHtml(MarkdownWithLanguage, _pipeline);
 
         // assert
         html.Should().NotBeNull("because an html string was properly generated");
@@ -114,7 +115,7 @@ That was some **code**.
     public void When_markdown_without_specified_language_is_passed_valid_html_is_generated()
     {
         // act
-        var html = Markdown.ToHtml(MarkdownWithoutLanguage, _pipeline);
+        var html = Markdig.Markdown.ToHtml(MarkdownWithoutLanguage, _pipeline);
 
         // assert
         html.Should().NotBeNull("because an html string was properly generated");
@@ -131,7 +132,7 @@ That was some **code**.
     public void When_markdown_with_unsupported_language_is_passed_valid_html_is_generated()
     {
         // act
-        var html = Markdown.ToHtml(MarkdownWithUnsupportedLanguage, _pipeline);
+        var html = Markdig.Markdown.ToHtml(MarkdownWithUnsupportedLanguage, _pipeline);
 
         // assert
         html.Should().NotBeNull("because an html string was properly generated");
@@ -148,7 +149,7 @@ That was some **code**.
     public void When_markdown_without_fenced_code_block_is_passed_valid_html_is_generated()
     {
         // act
-        var html = Markdown.ToHtml(MarkdownWithoutFencedCodeBlock, _pipeline);
+        var html = Markdig.Markdown.ToHtml(MarkdownWithoutFencedCodeBlock, _pipeline);
 
         // assert
         html.Should().NotBeNull("because an html string was properly generated");

@@ -1,8 +1,9 @@
 ﻿using ColorCode.Styling;
+using Markdig;
 using Markdig.Renderers;
 using Markdig.Renderers.Html;
 
-namespace Markdig.ColorCode;
+namespace Markdown.ColorCode;
 
 /// <summary>
 ///     An extension which colorizes code.

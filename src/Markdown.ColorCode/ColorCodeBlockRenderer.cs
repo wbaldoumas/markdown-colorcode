@@ -6,7 +6,7 @@ using Markdig.Renderers.Html;
 using Markdig.Syntax;
 using System.Text;
 
-namespace Markdig.ColorCode;
+namespace Markdown.ColorCode;
 
 /// <summary>
 ///     A renderer which colorizes code blocks.

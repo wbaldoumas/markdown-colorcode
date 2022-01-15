@@ -28,5 +28,5 @@ jobs:
     - name: Publish NuGet
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
-        PROJECT_FILE_PATH: src/Markdig.ColorCode/Markdig.ColorCode.csproj
+        PROJECT_FILE_PATH: src/Markdown.ColorCode/Markdown.ColorCode.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}

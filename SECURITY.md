@@ -1,7 +1,7 @@
 # Security Policies and Procedures
 
 This document outlines security procedures and general policies for the
-`Markdig.ColorCode` project.
+`Markdown.ColorCode` project.
 
 - [Security Policies and Procedures](#security-policies-and-procedures)
   - [Reporting a Bug](#reporting-a-bug)
@@ -10,9 +10,9 @@ This document outlines security procedures and general policies for the
 
 ## Reporting a Bug
 
-The `Markdig.ColorCode` team and community take all security bugs in
-`Markdig.ColorCode` seriously.  Thank you for improving the security of
-`Markdig.ColorCode`. We appreciate your efforts and responsible disclosure and
+The `Markdown.ColorCode` team and community take all security bugs in
+`Markdown.ColorCode` seriously.  Thank you for improving the security of
+`Markdown.ColorCode`. We appreciate your efforts and responsible disclosure and
 will make every effort to acknowledge your contributions.
 
 Report security bugs by emailing `william.baldoumas@gmail.com`.
