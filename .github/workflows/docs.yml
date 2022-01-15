@@ -2,7 +2,7 @@ name: Build and Deploy Documentation
 
 on:
   push:
-    branches: [ main ]
+    branches: [ nuget_packaging ]
 
 jobs:
   deploy-docs:
@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0
+
+      - name: Generate Index
+        run: sudo cp README.md docs/index.md
 
       - name: Parse Docs
         uses: nikeee/docfx-action@v1.0.0
