@@ -6,10 +6,10 @@ using Markdig.Renderers.Html;
 using Markdig.Syntax;
 using System.Text;
 
-namespace Markdig.ColorCode;
+namespace Markdown.ColorCode;
 
 /// <summary>
-///     An <see cref="HtmlObjectRenderer{TObject}"/> which colorizes code blocks.
+///     A renderer which colorizes code blocks using ColorCode.
 /// </summary>
 public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
 {
@@ -19,8 +19,8 @@ public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
     /// <summary>
     ///     Create a new <see cref="ColorCodeBlockRenderer"/> with the specified <paramref name="underlyingCodeBlockRenderer"/> and <paramref name="styleDictionary"/>.
     /// </summary>
-    /// <param name="underlyingCodeBlockRenderer">The underlying <see cref="CodeBlockRenderer"/> to handle unsupported languages.</param>
-    /// <param name="styleDictionary">A <see cref="StyleDictionary"/> for custom styling.</param>
+    /// <param name="underlyingCodeBlockRenderer">The underlying CodeBlockRenderer to handle unsupported languages.</param>
+    /// <param name="styleDictionary">A StyleDictionary for custom styling.</param>
     public ColorCodeBlockRenderer(CodeBlockRenderer underlyingCodeBlockRenderer, StyleDictionary styleDictionary)
     {
         _underlyingCodeBlockRenderer = underlyingCodeBlockRenderer;
@@ -28,7 +28,7 @@ public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
     }
 
     /// <summary>
-    ///     Writes the specified <see cref="MarkdownObject"/> to the <paramref name="renderer"/>.
+    ///     Writes the specified <paramref name="codeBlock"/> to the <paramref name="renderer"/>.
     /// </summary>
     /// <param name="renderer">The renderer.</param>
     /// <param name="codeBlock">The code block to render.</param>

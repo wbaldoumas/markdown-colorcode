@@ -1,11 +1,12 @@
 ﻿using ColorCode.Styling;
+using Markdig;
 using Markdig.Renderers;
 using Markdig.Renderers.Html;
 
-namespace Markdig.ColorCode;
+namespace Markdown.ColorCode;
 
 /// <summary>
-///     An extension which colorizes code.
+///     A Markdig extension which colorizes code using ColorCode.
 /// </summary>
 public class ColorCodeExtension : IMarkdownExtension
 {
@@ -18,7 +19,7 @@ public class ColorCodeExtension : IMarkdownExtension
     public ColorCodeExtension(StyleDictionary styleDictionary) => _styleDictionary = styleDictionary;
 
     /// <summary>
-    /// Setups this extension for the specified pipeline.
+    ///     Sets up this extension for the specified pipeline.
     /// </summary>
     /// <param name="pipeline">The pipeline.</param>
     public void Setup(MarkdownPipelineBuilder pipeline)
@@ -26,7 +27,7 @@ public class ColorCodeExtension : IMarkdownExtension
     }
 
     /// <summary>
-    /// Setups this extension for the specified renderer.
+    ///     Sets up this extension for the specified renderer.
     /// </summary>
     /// <param name="pipeline">The pipeline used to parse the document.</param>
     /// <param name="renderer">The renderer.</param>

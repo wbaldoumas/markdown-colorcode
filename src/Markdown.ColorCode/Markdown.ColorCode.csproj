@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Version>0.1.0</Version>
+	<Authors>William Baldoumas</Authors>
+	<Description>An extension for Markdig that adds syntax highlighting to code through the power of ColorCode.</Description>
+	<Copyright>Copyright ©2022 William Baldoumas</Copyright>
+	<PackageProjectUrl>https://wbaldoumas.github.io/markdown-colorcode/index.html</PackageProjectUrl>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<RepositoryType>git</RepositoryType>
+	<RepositoryUrl>https://github.com/wbaldoumas/markdown-colorcode</RepositoryUrl>
+	<PackageTags>markdig;markdown;html;colorcode;colorize;highlight;renderer</PackageTags>
+	<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	<PackageIcon>icon.png</PackageIcon>
+	<PackageId>Markdown.ColorCode</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\images\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+	<None Include="..\..\LICENSE">
+	  <Pack>True</Pack>
+	  <PackagePath></PackagePath>
+	</None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ColorCode.Core" Version="2.0.13" />
+    <PackageReference Include="ColorCode.HTML" Version="2.0.13" />
+    <PackageReference Include="Markdig" Version="0.26.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

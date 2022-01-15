@@ -1,12 +1,77 @@
-# Markdig.ColorCode
+# Markdown.ColorCode
 
 ## About The Project
 
-An extension for Markdig that adds syntax highlighting to code through the power of ColorCode.
+An extension for [Markdig](https://github.com/xoofx/markdig) that adds syntax highlighting to code through the power of [ColorCode](https://github.com/CommunityToolkit/ColorCode-Universal).
+
+## Demonstration
+
+### Before
+
+```text
+using Foo.Bar.Baz;
+
+namespace Foo.Api;
+
+public interface FooService {
+    /// <summary>
+    ///     Gets a new Foo!
+    /// </summary>
+    /// <returns>A new Foo</returns>
+    public void GetFoo() {
+        return new Foo();
+    }
+}
+```
+
+### After
+
+```csharp
+using Foo.Bar.Baz;
+
+namespace Foo.Api;
+
+public interface FooService {
+    /// <summary>
+    ///     Gets a new Foo!
+    /// </summary>
+    /// <returns>A new Foo</returns>
+    public void GetFoo() {
+        return new Foo();
+    }
+}
+```
+
+## Installation
+
+### Package Manager
+
+```text
+Install-Package Markdown.ColorCode -Version 0.1.0
+```
+
+### .NET CLI
+
+```text
+dotnet add package Markdown.ColorCode --version 0.1.0
+```
+
+## Usage
+
+To use this extension with [Markdig](https://github.com/xoofx/markdig), simply install the `Markdown.ColorCode` package use the ColorCode extension:
+
+```cs
+var pipeline = new MarkdownPipelineBuilder()
+    .UseAdvancedExtensions()
+    .UseColorCode()
+    .Build();
+
+var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
+```
 
 ## Roadmap
 
-See the [open issues](https://github.com/wbaldoumas/markdig-colorcode/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/wbaldoumas/markdown-colorcode/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -20,9 +85,9 @@ Distributed under the `MIT License` License. See `LICENSE` for more information.
 
 [@wbaldoumas](https://github.com/wbaldoumas)
 
-Project Link: [https://github.com/wbaldoumas/markdig-colorcode](https://github.com/wbaldoumas/markdig-colorcode)
+Project Link: [https://github.com/wbaldoumas/markdown-colorcode](https://github.com/wbaldoumas/markdown-colorcode)
 
 ## Acknowledgements
 
-This template was adapted from
+This `README` was adapted from
 [https://github.com/othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template).

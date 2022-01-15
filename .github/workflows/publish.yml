@@ -1,0 +1,32 @@
+name: Publish to NuGet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    environment: 
+      name: "Publish Release"
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET 6
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore Dependencies
+      run: dotnet restore src
+
+    - name: Build
+      run: dotnet build src --configuration Release --no-restore
+      
+    - name: Publish NuGet
+      uses: brandedoutcast/publish-nuget@v2.5.5
+      with:
+        PROJECT_FILE_PATH: src/Markdown.ColorCode/Markdown.ColorCode.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
