@@ -1,12 +1,18 @@
-﻿using FluentAssertions;
+﻿using ColorCode.Styling;
+using FluentAssertions;
 using HtmlAgilityPack;
 using Markdig;
+using Markdig.Parsers;
+using Markdig.Renderers;
+using Markdig.Renderers.Html;
+using Markdig.Syntax;
+using NSubstitute;
 using NUnit.Framework;
 
 namespace Markdown.ColorCode.UnitTests;
 
 [TestFixture]
-public class ColorCodeBlockRendererTests
+public class ColorCodeBlockRendererTests : HtmlObjectRenderer<CodeBlock>
 {
     private const string MarkdownWithLanguage = @"
 # Here is a header
@@ -160,5 +166,35 @@ That was some **code**.
         htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
 
         html.Should().ContainAll("code", "var test = 123456789;");
+    }
+
+    [Test]
+    public void When_code_block_is_not_a_fenced_code_block_renderer_uses_internal_renderer()
+    {
+        // arrange
+        var mockUnderlyingCodeBlockRenderer = Substitute.For<CodeBlockRenderer>();
+        var mockTextWriter = Substitute.For<TextWriter>();
+        var mockHtmlRenderer = Substitute.For<HtmlRenderer>(mockTextWriter);
+        var mockCodeBlockParser = Substitute.For<BlockParser>();
+        var mockCodeBlock = Substitute.For<CodeBlock>(mockCodeBlockParser);
+
+        var colorCodeBlockRenderer = new ColorCodeBlockRenderer(
+            mockUnderlyingCodeBlockRenderer,
+            StyleDictionary.DefaultDark
+        );
+
+        // act
+        colorCodeBlockRenderer.Write(mockHtmlRenderer, mockCodeBlock);
+
+        // assert
+        mockUnderlyingCodeBlockRenderer.ReceivedWithAnyArgs(1).Write(default!, default!);
+    }
+
+    protected override void Write(HtmlRenderer renderer, CodeBlock obj)
+    {
+        // Nothing to see here. 🙈
+        //
+        // This is needed from the hack of this test inheriting from HtmlObjectRenderer<CodeBlock> to allow
+        // assertions on the protected .Write(..., ...) method of CodeBlockRenderer.
     }
 }
