@@ -34,7 +34,7 @@ jobs:
           args: build docs/docfx.json
 
       - name: Deploy Docs
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: JamesIves/github-pages-deploy-action@v4.3.4
         with:
           branch: gh-pages
           folder: site/html
