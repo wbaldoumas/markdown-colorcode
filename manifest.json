@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Markdown.ColorCode.ColorCodeBlockRenderer.html",
-          "hash": "mHYXJDQSkWxRXx4Jfaks/g=="
+          "hash": "DTyNjHYMYkewZcfgVqRGyw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Markdown.ColorCode.ColorCodeExtension.html",
-          "hash": "oqevTmQANgjC1S5JLvv+Iw=="
+          "hash": "2oPXFLIENbei8nKPWyooWg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Markdown.ColorCode.MarkdownPipelineBuilderExtensions.html",
-          "hash": "+/r0Fna363mSu/CFJtYwgw=="
+          "hash": "gM/ZJVuNoTFr9ZtcICcGOQ=="
         }
       },
       "is_incremental": false,
