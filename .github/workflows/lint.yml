@@ -1,0 +1,34 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 🧼 lint markdown files
+        uses: avto-dev/markdown-lint@v1
+        with:
+          config: ".markdownlint.json"
+          args: "**/*.md .github/**/*.md"
+
+  json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 🧼 lint json files
+        uses: ocular-d/json-linter@0.0.2
+
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 🧼 lint renovate config
+        uses: suzuki-shunsuke/github-action-renovate-config-validator@v0.1.2
+        with:
+          config_file_path: "renovate.json"
