@@ -2,24 +2,24 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
-	<ImplicitUsings>enable</ImplicitUsings>
-	<Nullable>enable</Nullable>
-	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-	<GenerateDocumentationFile>True</GenerateDocumentationFile>
-	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<Version>1.2.0</Version>
-	<Authors>William Baldoumas</Authors>
-	<Description>An extension for Markdig that adds syntax highlighting to code through the power of ColorCode.</Description>
-	<Copyright>Copyright ©2022 William Baldoumas</Copyright>
-	<PackageProjectUrl>https://wbaldoumas.github.io/markdown-colorcode/index.html</PackageProjectUrl>
-	<PackageReadmeFile>README.md</PackageReadmeFile>
-	<RepositoryType>git</RepositoryType>
-	<RepositoryUrl>https://github.com/wbaldoumas/markdown-colorcode</RepositoryUrl>
-	<PackageTags>markdig;markdown;html;colorcode;colorize;highlight;renderer</PackageTags>
-	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	<PackageIcon>icon.png</PackageIcon>
-	<PackageId>Markdown.ColorCode</PackageId>
-	<LangVersion>10</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.2.0</Version>
+    <Authors>William Baldoumas</Authors>
+    <Description>An extension for Markdig that adds syntax highlighting to code through the power of ColorCode.</Description>
+    <Copyright>Copyright ©2022 William Baldoumas</Copyright>
+    <PackageProjectUrl>https://wbaldoumas.github.io/markdown-colorcode/index.html</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/wbaldoumas/markdown-colorcode</RepositoryUrl>
+    <PackageTags>markdig;markdown;html;colorcode;colorize;highlight;renderer</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageId>Markdown.ColorCode</PackageId>
+    <LangVersion>10</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
