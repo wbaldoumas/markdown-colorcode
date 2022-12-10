@@ -12,7 +12,6 @@ on:
 jobs:
   preview:
     name: Publish Preview
-    url: https://www.nuget.org/packages/Markdown.ColorCode/
     runs-on: ubuntu-latest
     environment:
       name: "Publish Preview"
