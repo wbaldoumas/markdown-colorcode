@@ -125,7 +125,7 @@ This `README` was adapted from
 [license-url]: https://github.com/wbaldoumas/markdown-colorcode/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/williambaldoumas
-[github-checks-shield]: https://img.shields.io/github/checks-status/wbaldoumas/markdown-colorcode/main?style=for-the-badge
+[github-checks-shield]: https://img.shields.io/github/workflow/status/wbaldoumas/markdown-colorcode/Build%20and%20Test?style=for-the-badge
 [github-checks-url]: https://github.com/wbaldoumas/markdown-colorcode/actions
 [coverage-shield]: https://img.shields.io/codecov/c/github/wbaldoumas/markdown-colorcode?style=for-the-badge
 [coverage-url]: https://app.codecov.io/gh/wbaldoumas/markdown-colorcode/branch/main
