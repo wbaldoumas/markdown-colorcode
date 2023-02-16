@@ -27,10 +27,11 @@ jobs:
     - name: Unit Test
       run: |
         cd ./tests/Markdown.ColorCode.UnitTests/
-        dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutput=/home/runner/work/markdown-colorcode/markdown-colorcode/ /p:CoverletOutputFormat=opencover
-        
+        dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+        cp TestResults/*/coverage.opencover.xml .
+
     - name: Publish Code Coverage
       uses: codecov/codecov-action@v3
       with:
-        files: /home/runner/work/markdown-colorcode/markdown-colorcode/tests/Markdown.ColorCode.UnitTests/coverage.json
+        files: /home/runner/work/markdown-colorcode/markdown-colorcode/tests/Markdown.ColorCode.UnitTests/coverage.opencover.xml
         fail_ci_if_error: true
