@@ -1,5 +1,6 @@
 ﻿using ColorCode;
 using ColorCode.Styling;
+using Markdig.Helpers;
 using Markdig.Parsers;
 using Markdig.Renderers;
 using Markdig.Renderers.Html;
@@ -68,7 +69,7 @@ public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
     private static string ExtractCode(LeafBlock leafBlock)
     {
         var code = new StringBuilder();
-        var lines = leafBlock.Lines.Lines;
+        var lines = leafBlock.Lines.Lines ?? Array.Empty<StringLine>();
         var totalLines = lines.Length;
 
         for (var index = 0; index < totalLines; index++)

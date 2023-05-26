@@ -95,10 +95,56 @@ That was some **code**.
 That was some **code**.
 ";
 
+    private const string MarkdownWithEmptyFencedCodeBlockInline =
+        "To print \"Hello World\" in C#, you can use the following:\n```c";
+
+    private const string MarkdownWithEmptyFencedCodeBlock = @"
+# Here is a header
+```";
+
+    private const string MarkdownWithEmptyFencedCodeBlockAndLanguage = @"
+# Here is a header
+```csharp";
+
+    private const string MarkdownWithEmptyClosedFencedCodeBlockAndLanguage = @"
+# Here is a header
+```csharp
+```";
+
     private readonly MarkdownPipeline _pipeline = new MarkdownPipelineBuilder()
         .UseAdvancedExtensions()
         .UseColorCode()
         .Build();
+
+    [Test]
+    [TestCase(MarkdownWithEmptyFencedCodeBlock, false)]
+    [TestCase(MarkdownWithEmptyFencedCodeBlockInline, true)]
+    [TestCase(MarkdownWithEmptyFencedCodeBlockAndLanguage, true)]
+    [TestCase(MarkdownWithEmptyClosedFencedCodeBlockAndLanguage, true)]
+    public void When_markdown_with_empty_fenced_code_block_is_passed_valid_html_is_generated(
+        string markdown,
+        bool isStyled)
+    {
+        // act
+        var html = Markdig.Markdown.ToHtml(markdown, _pipeline);
+
+        // assert
+        html.Should().NotBeNull("because an html string was properly generated");
+
+        var htmlDocument = new HtmlDocument();
+
+        htmlDocument.LoadHtml(html);
+        htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
+
+        if (isStyled)
+        {
+            html.Should().ContainAll("pre", "div", "style=\"color");
+        }
+        else
+        {
+            html.Should().ContainAll("pre", "code");
+        }
+    }
 
     [Test]
     public void When_markdown_with_specified_language_is_passed_valid_html_is_generated()
