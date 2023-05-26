@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Handle for empty code blocks (https://github.com/wbaldoumas/markdown-colorcode/pull/89)
+- Handle for empty code blocks ([#89](https://github.com/wbaldoumas/markdown-colorcode/pull/89))
 
 ## [1.0.3] - 2023-03-12
 
