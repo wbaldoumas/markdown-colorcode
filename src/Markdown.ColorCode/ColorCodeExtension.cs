@@ -11,12 +11,18 @@ namespace Markdown.ColorCode;
 public class ColorCodeExtension : IMarkdownExtension
 {
     private readonly StyleDictionary _styleDictionary;
+    private readonly bool _useCssFormatter;
 
     /// <summary>
     ///     Creates a new <see cref="ColorCodeExtension"/> with the specified <paramref name="styleDictionary"/>.
     /// </summary>
     /// <param name="styleDictionary">A dictionary indicating how to style the code.</param>
-    public ColorCodeExtension(StyleDictionary styleDictionary) => _styleDictionary = styleDictionary;
+    /// <param name="useCssFormatter">Indicates whether to use the CSS formatter.</param>
+    public ColorCodeExtension(StyleDictionary styleDictionary, bool useCssFormatter = false)
+    {
+        _styleDictionary = styleDictionary;
+        _useCssFormatter = useCssFormatter;
+    }
 
     /// <summary>
     ///     Sets up this extension for the specified pipeline.
@@ -52,7 +58,8 @@ public class ColorCodeExtension : IMarkdownExtension
         htmlRenderer.ObjectRenderers.AddIfNotAlready(
             new ColorCodeBlockRenderer(
                 codeBlockRenderer,
-                _styleDictionary
+                _styleDictionary,
+                _useCssFormatter
             )
         );
     }

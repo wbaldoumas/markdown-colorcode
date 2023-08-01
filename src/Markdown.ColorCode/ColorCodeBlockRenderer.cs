@@ -16,16 +16,22 @@ public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
 {
     private readonly CodeBlockRenderer _underlyingCodeBlockRenderer;
     private readonly StyleDictionary _styleDictionary;
+    private readonly bool _useCssFormatter;
 
     /// <summary>
     ///     Create a new <see cref="ColorCodeBlockRenderer"/> with the specified <paramref name="underlyingCodeBlockRenderer"/> and <paramref name="styleDictionary"/>.
     /// </summary>
     /// <param name="underlyingCodeBlockRenderer">The underlying CodeBlockRenderer to handle unsupported languages.</param>
     /// <param name="styleDictionary">A StyleDictionary for custom styling.</param>
-    public ColorCodeBlockRenderer(CodeBlockRenderer underlyingCodeBlockRenderer, StyleDictionary styleDictionary)
+    /// <param name="useCssFormatter">Indicates whether to use the CSS formatter.</param>
+    public ColorCodeBlockRenderer(
+        CodeBlockRenderer underlyingCodeBlockRenderer,
+        StyleDictionary styleDictionary,
+        bool useCssFormatter = false)
     {
         _underlyingCodeBlockRenderer = underlyingCodeBlockRenderer;
         _styleDictionary = styleDictionary;
+        _useCssFormatter = useCssFormatter;
     }
 
     /// <summary>
@@ -53,8 +59,7 @@ public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
         }
 
         var code = ExtractCode(codeBlock);
-        var formatter = new HtmlFormatter(_styleDictionary);
-        var html = formatter.GetHtmlString(code, language);
+        var html = GetHtml(code, language);
 
         renderer.Write(html);
     }
@@ -94,4 +99,8 @@ public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
 
         return code.ToString();
     }
+
+    private string? GetHtml(string sourceCode, ILanguage language) => _useCssFormatter
+        ? new HtmlClassFormatter(_styleDictionary).GetHtmlString(sourceCode, language)
+        : new HtmlFormatter(_styleDictionary).GetHtmlString(sourceCode, language);
 }

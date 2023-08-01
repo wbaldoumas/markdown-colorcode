@@ -116,6 +116,11 @@ That was some **code**.
         .UseColorCode()
         .Build();
 
+    private readonly MarkdownPipeline _cssPipeline = new MarkdownPipelineBuilder()
+        .UseAdvancedExtensions()
+        .UseColorCodeWithClassStyling()
+        .Build();
+
     [Test]
     [TestCase(MarkdownWithEmptyFencedCodeBlock, false)]
     [TestCase(MarkdownWithEmptyFencedCodeBlockInline, true)]
@@ -147,6 +152,37 @@ That was some **code**.
     }
 
     [Test]
+    [TestCase(MarkdownWithEmptyFencedCodeBlock, "", false)]
+    [TestCase(MarkdownWithEmptyFencedCodeBlockInline, "cplusplus", true)]
+    [TestCase(MarkdownWithEmptyFencedCodeBlockAndLanguage, "csharp", true)]
+    [TestCase(MarkdownWithEmptyClosedFencedCodeBlockAndLanguage, "csharp", true)]
+    public void When_markdown_with_empty_fenced_code_block_is_passed_to_css_pipeline_valid_html_is_generated(
+        string markdown,
+        string languageClass,
+        bool isStyled)
+    {
+        // act
+        var html = Markdig.Markdown.ToHtml(markdown, _cssPipeline);
+
+        // assert
+        html.Should().NotBeNull("because an html string was properly generated");
+
+        var htmlDocument = new HtmlDocument();
+
+        htmlDocument.LoadHtml(html);
+        htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
+
+        if (isStyled)
+        {
+            html.Should().ContainAll("pre", "div", $"class=\"{languageClass}\"");
+        }
+        else
+        {
+            html.Should().ContainAll("pre", "code");
+        }
+    }
+
+    [Test]
     public void When_markdown_with_specified_language_is_passed_valid_html_is_generated()
     {
         // act
@@ -164,10 +200,28 @@ That was some **code**.
     }
 
     [Test]
+    public void When_markdown_with_specified_language_is_passed_to_css_pipeline_valid_html_is_generated()
+    {
+        // act
+        var html = Markdig.Markdown.ToHtml(MarkdownWithLanguage, _cssPipeline);
+
+        // assert
+        html.Should().NotBeNull("because an html string was properly generated");
+
+        var htmlDocument = new HtmlDocument();
+        htmlDocument.LoadHtml(html);
+
+        htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
+
+        html.Should().ContainAll("div", "pre", "span", "class=\"csharp\"", "12345");
+    }
+
+    [Test]
     public void When_markdown_without_specified_language_is_passed_valid_html_is_generated()
     {
         // act
         var html = Markdig.Markdown.ToHtml(MarkdownWithoutLanguage, _pipeline);
+        var otherHtml = Markdig.Markdown.ToHtml(MarkdownWithoutLanguage, _cssPipeline);
 
         // assert
         html.Should().NotBeNull("because an html string was properly generated");
@@ -178,6 +232,7 @@ That was some **code**.
         htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
 
         html.Should().ContainAll("pre", "code", "12345");
+        otherHtml.Should().ContainAll("pre", "code", "12345");
     }
 
     [Test]
@@ -185,6 +240,7 @@ That was some **code**.
     {
         // act
         var html = Markdig.Markdown.ToHtml(MarkdownWithUnsupportedLanguage, _pipeline);
+        var otherHtml = Markdig.Markdown.ToHtml(MarkdownWithUnsupportedLanguage, _cssPipeline);
 
         // assert
         html.Should().NotBeNull("because an html string was properly generated");
@@ -194,7 +250,8 @@ That was some **code**.
 
         htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
 
-        html.Should().ContainAll("pre", "code", "capitalize");
+        html.Should().ContainAll("pre", "code", "capitalize", "class=\"language-elixir\"");
+        otherHtml.Should().ContainAll("pre", "code", "capitalize", "class=\"language-elixir\"");
     }
 
     [Test]
