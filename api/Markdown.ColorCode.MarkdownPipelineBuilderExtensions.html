@@ -108,12 +108,68 @@
   </span>
   <a id="Markdown_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_" data-uid="Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode*"></a>
   <h4 id="Markdown_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCode_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__" data-uid="Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode(MarkdownPipelineBuilder,System.Nullable{StyleDictionary})">UseColorCode(MarkdownPipelineBuilder, Nullable&lt;StyleDictionary&gt;)</h4>
-  <div class="markdown level1 summary"><p>Use ColorCode to apply code colorization to markdown within the Markdig pipeline.</p>
+  <div class="markdown level1 summary"><p>Use ColorCode to apply code colorization to markdown using inline style attributes within the Markdig pipeline.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static MarkdownPipelineBuilder UseColorCode(this MarkdownPipelineBuilder pipeline, StyleDictionary? styleDictionary = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MarkdownPipelineBuilder</span></td>
+        <td><span class="parametername">pipeline</span></td>
+        <td><p>The pipeline the ColorCode extension is being added to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">StyleDictionary</span>&gt;</td>
+        <td><span class="parametername">styleDictionary</span></td>
+        <td><p>An optional StyleDictionary for custom styling.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MarkdownPipelineBuilder</span></td>
+        <td><p>The MarkdownPipelineBuilder with the added ColorCode extension.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wbaldoumas/markdown-colorcode/new/main/apiSpec/new?filename=Markdown_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCodeWithClassStyling_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__.md&amp;value=---%0Auid%3A%20Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling(MarkdownPipelineBuilder%2CSystem.Nullable%7BStyleDictionary%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wbaldoumas/markdown-colorcode/blob/main/src/Markdown.ColorCode/MarkdownPipelineBuilderExtensions.cs/#L32">View Source</a>
+  </span>
+  <a id="Markdown_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCodeWithClassStyling_" data-uid="Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling*"></a>
+  <h4 id="Markdown_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCodeWithClassStyling_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__" data-uid="Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling(MarkdownPipelineBuilder,System.Nullable{StyleDictionary})">UseColorCodeWithClassStyling(MarkdownPipelineBuilder, Nullable&lt;StyleDictionary&gt;)</h4>
+  <div class="markdown level1 summary"><p>Use ColorCode to apply code colorization to markdown using CSS classes within the Markdig pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MarkdownPipelineBuilder UseColorCodeWithClassStyling(this MarkdownPipelineBuilder pipeline, StyleDictionary? styleDictionary = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

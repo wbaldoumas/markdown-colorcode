@@ -13,12 +13,12 @@ references:
   commentId: T:Markdown.ColorCode.ColorCodeBlockRenderer
   fullName: Markdown.ColorCode.ColorCodeBlockRenderer
   nameWithType: ColorCodeBlockRenderer
-- uid: Markdown.ColorCode.ColorCodeBlockRenderer.#ctor(CodeBlockRenderer,StyleDictionary)
-  name: ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary)
-  href: api/Markdown.ColorCode.ColorCodeBlockRenderer.html#Markdown_ColorCode_ColorCodeBlockRenderer__ctor_CodeBlockRenderer_StyleDictionary_
-  commentId: M:Markdown.ColorCode.ColorCodeBlockRenderer.#ctor(CodeBlockRenderer,StyleDictionary)
-  fullName: Markdown.ColorCode.ColorCodeBlockRenderer.ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary)
-  nameWithType: ColorCodeBlockRenderer.ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary)
+- uid: Markdown.ColorCode.ColorCodeBlockRenderer.#ctor(CodeBlockRenderer,StyleDictionary,System.Boolean)
+  name: ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary, Boolean)
+  href: api/Markdown.ColorCode.ColorCodeBlockRenderer.html#Markdown_ColorCode_ColorCodeBlockRenderer__ctor_CodeBlockRenderer_StyleDictionary_System_Boolean_
+  commentId: M:Markdown.ColorCode.ColorCodeBlockRenderer.#ctor(CodeBlockRenderer,StyleDictionary,System.Boolean)
+  fullName: Markdown.ColorCode.ColorCodeBlockRenderer.ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary, System.Boolean)
+  nameWithType: ColorCodeBlockRenderer.ColorCodeBlockRenderer(CodeBlockRenderer, StyleDictionary, Boolean)
 - uid: Markdown.ColorCode.ColorCodeBlockRenderer.#ctor*
   name: ColorCodeBlockRenderer
   href: api/Markdown.ColorCode.ColorCodeBlockRenderer.html#Markdown_ColorCode_ColorCodeBlockRenderer__ctor_
@@ -45,12 +45,12 @@ references:
   commentId: T:Markdown.ColorCode.ColorCodeExtension
   fullName: Markdown.ColorCode.ColorCodeExtension
   nameWithType: ColorCodeExtension
-- uid: Markdown.ColorCode.ColorCodeExtension.#ctor(StyleDictionary)
-  name: ColorCodeExtension(StyleDictionary)
-  href: api/Markdown.ColorCode.ColorCodeExtension.html#Markdown_ColorCode_ColorCodeExtension__ctor_StyleDictionary_
-  commentId: M:Markdown.ColorCode.ColorCodeExtension.#ctor(StyleDictionary)
-  fullName: Markdown.ColorCode.ColorCodeExtension.ColorCodeExtension(StyleDictionary)
-  nameWithType: ColorCodeExtension.ColorCodeExtension(StyleDictionary)
+- uid: Markdown.ColorCode.ColorCodeExtension.#ctor(StyleDictionary,System.Boolean)
+  name: ColorCodeExtension(StyleDictionary, Boolean)
+  href: api/Markdown.ColorCode.ColorCodeExtension.html#Markdown_ColorCode_ColorCodeExtension__ctor_StyleDictionary_System_Boolean_
+  commentId: M:Markdown.ColorCode.ColorCodeExtension.#ctor(StyleDictionary,System.Boolean)
+  fullName: Markdown.ColorCode.ColorCodeExtension.ColorCodeExtension(StyleDictionary, System.Boolean)
+  nameWithType: ColorCodeExtension.ColorCodeExtension(StyleDictionary, Boolean)
 - uid: Markdown.ColorCode.ColorCodeExtension.#ctor*
   name: ColorCodeExtension
   href: api/Markdown.ColorCode.ColorCodeExtension.html#Markdown_ColorCode_ColorCodeExtension__ctor_
@@ -99,3 +99,19 @@ references:
   isSpec: "True"
   fullName: Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCode
   nameWithType: MarkdownPipelineBuilderExtensions.UseColorCode
+- uid: Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling(MarkdownPipelineBuilder,System.Nullable{StyleDictionary})
+  name: UseColorCodeWithClassStyling(MarkdownPipelineBuilder, Nullable<StyleDictionary>)
+  href: api/Markdown.ColorCode.MarkdownPipelineBuilderExtensions.html#Markdown_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCodeWithClassStyling_MarkdownPipelineBuilder_System_Nullable_StyleDictionary__
+  commentId: M:Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling(MarkdownPipelineBuilder,System.Nullable{StyleDictionary})
+  name.vb: UseColorCodeWithClassStyling(MarkdownPipelineBuilder, Nullable(Of StyleDictionary))
+  fullName: Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling(MarkdownPipelineBuilder, System.Nullable<StyleDictionary>)
+  fullName.vb: Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling(MarkdownPipelineBuilder, System.Nullable(Of StyleDictionary))
+  nameWithType: MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling(MarkdownPipelineBuilder, Nullable<StyleDictionary>)
+  nameWithType.vb: MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling(MarkdownPipelineBuilder, Nullable(Of StyleDictionary))
+- uid: Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling*
+  name: UseColorCodeWithClassStyling
+  href: api/Markdown.ColorCode.MarkdownPipelineBuilderExtensions.html#Markdown_ColorCode_MarkdownPipelineBuilderExtensions_UseColorCodeWithClassStyling_
+  commentId: Overload:Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling
+  isSpec: "True"
+  fullName: Markdown.ColorCode.MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling
+  nameWithType: MarkdownPipelineBuilderExtensions.UseColorCodeWithClassStyling
