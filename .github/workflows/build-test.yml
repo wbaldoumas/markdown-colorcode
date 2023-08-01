@@ -10,15 +10,17 @@ jobs:
   build_and_test:
     name: Build and Test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: ['6.0.x', '7.0.x']
+
     steps:
     - uses: actions/checkout@v3
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: |
-          6.0.x
-          7.0.x
+        dotnet-version: ${{ matrix.dotnet-version }}
 
     - name: Restore Dependencies
       run: dotnet restore src
@@ -30,10 +32,10 @@ jobs:
       run: |
         cd ./tests/Markdown.ColorCode.UnitTests/
         dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
-        cp TestResults/*/coverage.opencover.xml .
+        cp TestResults/*/coverage.opencover.xml coverage-${{ matrix.dotnet-version }}.opencover.xml
 
     - name: Publish Code Coverage
       uses: codecov/codecov-action@v3
       with:
-        files: /home/runner/work/markdown-colorcode/markdown-colorcode/tests/Markdown.ColorCode.UnitTests/coverage.opencover.xml
+        files: ./tests/Markdown.ColorCode.UnitTests/coverage-${{ matrix.dotnet-version }}.opencover.xml
         fail_ci_if_error: true
