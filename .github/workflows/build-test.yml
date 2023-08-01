@@ -13,10 +13,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Setup .NET 6
+    - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: |
+          6.0.x
+          7.0.x
 
     - name: Restore Dependencies
       run: dotnet restore src
@@ -28,7 +30,7 @@ jobs:
       run: |
         cd ./tests/Markdown.ColorCode.UnitTests/
         dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
-        cp TestResults/*/coverage.opencover.xml .
+        cp $(find TestResults -name coverage.opencover.xml | head -1) .
 
     - name: Publish Code Coverage
       uses: codecov/codecov-action@v3
