@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2023-07-31
+
+### Added
+
+- Support for CSS class based styling. ([#102](https://github.com/wbaldoumas/markdown-colorcode/pull/102))
+- .NET 7 build ([#103](https://github.com/wbaldoumas/markdown-colorcode/pull/103))
+
+### Changed
+
+Dependency updates:
+| Package | Type | Update | Change |
+|---|---|---|---|
+| [ColorCode.Core](https://togithub.com/CommunityToolkit/ColorCode-Universal) | nuget | patch | `2.0.14` -> `2.0.15` |
+| [ColorCode.HTML](https://togithub.com/CommunityToolkit/ColorCode-Universal) | nuget | patch | `2.0.14` -> `2.0.15` |
+
 ## [1.0.4] - 2023-03-12
 
 ### Fixed
