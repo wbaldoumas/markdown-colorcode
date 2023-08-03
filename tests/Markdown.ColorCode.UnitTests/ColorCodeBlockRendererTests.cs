@@ -141,14 +141,7 @@ That was some **code**.
         htmlDocument.LoadHtml(html);
         htmlDocument.ParseErrors.Should().BeEmpty("because valid html was generated");
 
-        if (isStyled)
-        {
-            html.Should().ContainAll("pre", "div", "style=\"color");
-        }
-        else
-        {
-            html.Should().ContainAll("pre", "code");
-        }
+        html.Should().ContainAll("pre", "div", "style=\"color");
     }
 
     [Test]
@@ -178,7 +171,7 @@ That was some **code**.
         }
         else
         {
-            html.Should().ContainAll("pre", "code");
+            html.Should().ContainAll("pre", "div", $"class=\"{TextLanguage.LanguageId}\"");
         }
     }
 

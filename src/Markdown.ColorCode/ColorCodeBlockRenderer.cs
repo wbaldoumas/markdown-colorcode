@@ -68,7 +68,12 @@ public class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
     {
         var languageId = fencedCodeBlock.Info!.Replace(parser.InfoPrefix!, string.Empty);
 
-        return string.IsNullOrWhiteSpace(languageId) ? null : Languages.FindById(languageId);
+        if (string.IsNullOrWhiteSpace(languageId) || languageId == TextLanguage.LanguageId)
+        {
+            return new TextLanguage();
+        }
+
+        return Languages.FindById(languageId);
     }
 
     private static string ExtractCode(LeafBlock leafBlock)
