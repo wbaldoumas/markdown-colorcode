@@ -64,13 +64,13 @@ public interface FooService {
 ### Package Manager
 
 ```text
-Install-Package Markdown.ColorCode -Version 1.1.2
+Install-Package Markdown.ColorCode -Version 2.0.0
 ```
 
 ### .NET CLI
 
 ```text
-dotnet add package Markdown.ColorCode --version 1.1.2
+dotnet add package Markdown.ColorCode --version 2.0.0
 ```
 
 ## Usage
@@ -81,6 +81,22 @@ To use this extension with [Markdig](https://github.com/xoofx/markdig), simply i
 var pipeline = new MarkdownPipelineBuilder()
     .UseAdvancedExtensions()
     .UseColorCode()
+    .Build();
+
+var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
+```
+
+Several optional configuration options are also at your disposal:
+
+```cs
+var pipeline = new MarkdownPipelineBuilder()
+    .UseAdvancedExtensions()
+    .UseColorCode(
+        HtmlFormatterType.Style, // use style-based colorization (default)
+        myCustomStyleDictionary, // use a custom colorization style dictionary
+        myAdditionalLanguages, // augment the built-in language support
+        myCustomLanguageId // set a default language ID to fall back to
+    )
     .Build();
 
 var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);

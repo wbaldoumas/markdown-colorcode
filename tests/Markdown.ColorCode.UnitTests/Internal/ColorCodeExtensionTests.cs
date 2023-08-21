@@ -1,15 +1,7 @@
-﻿using ColorCode.Styling;
-using FluentAssertions;
-using Markdig;
-using Markdig.Renderers;
-using Markdig.Renderers.Html;
-using NSubstitute;
-using NUnit.Framework;
-
-namespace Markdown.ColorCode.UnitTests;
+﻿namespace Markdown.ColorCode.UnitTests.Internal;
 
 [TestFixture]
-public class ColorCodeExtensionTests
+internal sealed class ColorCodeExtensionTests
 {
     [Test]
     public void When_markdown_renderer_is_not_html_renderer_setup_is_aborted()
@@ -19,7 +11,11 @@ public class ColorCodeExtensionTests
         var invalidRenderer = Substitute.For<TextRendererBase>(mockTextWriter);
         var pipeline = new MarkdownPipelineBuilder().Build();
 
-        var colorCodeExtension = new ColorCodeExtension(StyleDictionary.DefaultDark);
+        var colorCodeExtension = new ColorCodeExtension(
+            new LanguageExtractor(Enumerable.Empty<ILanguage>(), string.Empty),
+            new CodeExtractor(),
+            new HtmlStyleFormatter(StyleDictionary.DefaultDark)
+        );
 
         // act
         colorCodeExtension.Setup(pipeline, invalidRenderer);
@@ -40,7 +36,11 @@ public class ColorCodeExtensionTests
 
         invalidRenderer.ObjectRenderers.TryRemove<CodeBlockRenderer>();
 
-        var colorCodeExtension = new ColorCodeExtension(StyleDictionary.DefaultDark);
+        var colorCodeExtension = new ColorCodeExtension(
+            new LanguageExtractor(Enumerable.Empty<ILanguage>(), string.Empty),
+            new CodeExtractor(),
+            new HtmlStyleFormatter(StyleDictionary.DefaultDark)
+        );
 
         // act
         colorCodeExtension.Setup(pipeline, invalidRenderer);
