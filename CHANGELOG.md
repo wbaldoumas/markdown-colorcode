@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2023-08-21
+
+This release includes several breaking changes. See the details below for more info.
+
+### Changed
+
+The `UseColorCode` `MarkdownPipelineBuilder` extension method has been changed to take in additional optional parameters. These are:
+
+| Parameter | Default | Usage |
+|---|---|---|
+| `htmlFormatterType` | `HtmlFormatterType.Style` | The HTML formatter type to use. Supports inline style-based (default) or CSS class-based code colorization. |
+| `styleDictionary` | `StyleDictionary.DefaultDark` | The code colorization style to use. |
+| `additionalLanguages` | `null` | Additional languages to augment the built-in languages provided by ColorCode-Universal. |
+| `defaultLanguageId` | `null` | A default language ID to use if the language at hand can't be found within the languages provided by ColorCode-Universal (or the `additionalLanguages` which have augmented them). The default language will also be used if no language is provided for the given code block.
+
+### Removed
+
+- Removed the `UseColorCodeWithClassStyling` `MarkdownPipelineBuilder` extension method. If you were previously using this, pass `HtmlFormatterType.Css` to the `UseColorCode` extension method to define the same behavior.
+- Various classes have been made `internal` to reduce the footprint of this package.
+
 ## [1.1.2] - 2023-08-18
 
 ### Changed

@@ -1,27 +1,30 @@
-﻿using ColorCode.Styling;
-using Markdig;
-using Markdig.Renderers;
-using Markdig.Renderers.Html;
-
-namespace Markdown.ColorCode;
+﻿namespace Markdown.ColorCode.Internal;
 
 /// <summary>
 ///     A Markdig extension which colorizes code using ColorCode.
 /// </summary>
-public class ColorCodeExtension : IMarkdownExtension
+internal sealed class ColorCodeExtension : IMarkdownExtension
 {
-    private readonly StyleDictionary _styleDictionary;
-    private readonly bool _useCssFormatter;
+    private readonly ILanguageExtractor _languageExtractor;
+
+    private readonly ICodeExtractor _codeExtractor;
+
+    private readonly IHtmlFormatter _htmlFormatter;
 
     /// <summary>
-    ///     Creates a new <see cref="ColorCodeExtension"/> with the specified <paramref name="styleDictionary"/>.
+    ///     Create a new <see cref="ColorCodeExtension"/>.
     /// </summary>
-    /// <param name="styleDictionary">A dictionary indicating how to style the code.</param>
-    /// <param name="useCssFormatter">Indicates whether to use the CSS formatter.</param>
-    public ColorCodeExtension(StyleDictionary styleDictionary, bool useCssFormatter = false)
+    /// <param name="languageExtractor">The <see cref="ILanguageExtractor"/> to use with the extension.</param>
+    /// <param name="codeExtractor">The <see cref="ICodeExtractor"/> to use with the extension.</param>
+    /// <param name="htmlFormatter">The <see cref="IHtmlFormatter"/> to use with the extension.</param>
+    public ColorCodeExtension(
+        ILanguageExtractor languageExtractor,
+        ICodeExtractor codeExtractor,
+        IHtmlFormatter htmlFormatter)
     {
-        _styleDictionary = styleDictionary;
-        _useCssFormatter = useCssFormatter;
+        _languageExtractor = languageExtractor;
+        _codeExtractor = codeExtractor;
+        _htmlFormatter = htmlFormatter;
     }
 
     /// <summary>
@@ -46,7 +49,7 @@ public class ColorCodeExtension : IMarkdownExtension
 
         var codeBlockRenderer = htmlRenderer.ObjectRenderers.FindExact<CodeBlockRenderer>();
 
-        if (codeBlockRenderer != null)
+        if (codeBlockRenderer is not null)
         {
             htmlRenderer.ObjectRenderers.Remove(codeBlockRenderer);
         }
@@ -58,8 +61,9 @@ public class ColorCodeExtension : IMarkdownExtension
         htmlRenderer.ObjectRenderers.AddIfNotAlready(
             new ColorCodeBlockRenderer(
                 codeBlockRenderer,
-                _styleDictionary,
-                _useCssFormatter
+                _languageExtractor,
+                _codeExtractor,
+                _htmlFormatter
             )
         );
     }

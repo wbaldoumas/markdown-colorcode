@@ -1,40 +1,38 @@
-﻿using ColorCode.Styling;
-using Markdig;
-
-namespace Markdown.ColorCode;
+﻿namespace Markdown.ColorCode;
 
 /// <summary>
-///     Extensions for adding ColorCode to the Markdig pipeline.
+///     Extensions for adding ColorCode code colorization to the Markdig <see cref="MarkdownPipelineBuilder"/>.
 /// </summary>
 public static class MarkdownPipelineBuilderExtensions
 {
     /// <summary>
-    ///     Use ColorCode to apply code colorization to markdown using inline style attributes within the Markdig pipeline.
+    ///     Use ColorCode to colorize HTML generated from Markdown.
     /// </summary>
-    /// <param name="pipeline">The pipeline the ColorCode extension is being added to.</param>
-    /// <param name="styleDictionary">An optional StyleDictionary for custom styling.</param>
-    /// <returns>The MarkdownPipelineBuilder with the added ColorCode extension.</returns>
+    /// <param name="markdownPipelineBuilder">The <see cref="MarkdownPipelineBuilder"/> to configure.</param>
+    /// <param name="htmlFormatterType">Optional. The type of HTML formatter to use when generating HTML from Markdown.</param>
+    /// <param name="styleDictionary">Optional. The styles to use when generating HTML from Markdown.</param>
+    /// <param name="additionalLanguages">Optional. Additional languages used to augment the built-in languages provided by ColorCode-Universal.</param>
+    /// <param name="defaultLanguageId">Optional. The default language to use if a given language can't be found.</param>
+    /// <returns>The <see cref="MarkdownPipelineBuilder"/> configured with ColorCode.</returns>
     public static MarkdownPipelineBuilder UseColorCode(
-        this MarkdownPipelineBuilder pipeline,
-        StyleDictionary? styleDictionary = null)
+        this MarkdownPipelineBuilder markdownPipelineBuilder,
+        HtmlFormatterType htmlFormatterType = HtmlFormatterType.Style,
+        StyleDictionary? styleDictionary = null,
+        IEnumerable<ILanguage>? additionalLanguages = null,
+        string? defaultLanguageId = null)
     {
-        pipeline.Extensions.Add(new ColorCodeExtension(styleDictionary ?? StyleDictionary.DefaultDark));
+        var languageExtractor = new LanguageExtractor(
+            additionalLanguages ?? Enumerable.Empty<ILanguage>(),
+            defaultLanguageId ?? string.Empty
+        );
 
-        return pipeline;
-    }
+        var codeExtractor = new CodeExtractor();
+        var htmlFormatterFactory = new HtmlFormatterFactory(styleDictionary ?? StyleDictionary.DefaultDark);
+        var htmlFormatter = htmlFormatterFactory.Get(htmlFormatterType);
+        var colorCodeExtension = new ColorCodeExtension(languageExtractor, codeExtractor, htmlFormatter);
 
-    /// <summary>
-    ///     Use ColorCode to apply code colorization to markdown using CSS classes within the Markdig pipeline.
-    /// </summary>
-    /// <param name="pipeline">The pipeline the ColorCode extension is being added to.</param>
-    /// <param name="styleDictionary">An optional StyleDictionary for custom styling.</param>
-    /// <returns>The MarkdownPipelineBuilder with the added ColorCode extension.</returns>
-    public static MarkdownPipelineBuilder UseColorCodeWithClassStyling(
-        this MarkdownPipelineBuilder pipeline,
-        StyleDictionary? styleDictionary = null)
-    {
-        pipeline.Extensions.Add(new ColorCodeExtension(styleDictionary ?? StyleDictionary.DefaultDark, true));
+        markdownPipelineBuilder.Extensions.Add(colorCodeExtension);
 
-        return pipeline;
+        return markdownPipelineBuilder;
     }
 }
