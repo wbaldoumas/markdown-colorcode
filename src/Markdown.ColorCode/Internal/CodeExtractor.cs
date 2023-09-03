@@ -7,6 +7,8 @@ internal sealed class CodeExtractor : ICodeExtractor
     public string ExtractCode(LeafBlock leafBlock)
     {
         var code = new StringBuilder();
+
+        // ReSharper disable once NullCoalescingConditionIsAlwaysNotNullAccordingToAPIContract
         var lines = leafBlock.Lines.Lines ?? Array.Empty<StringLine>();
         var totalLines = lines.Length;
 

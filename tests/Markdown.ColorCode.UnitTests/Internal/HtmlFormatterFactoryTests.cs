@@ -28,7 +28,7 @@ internal sealed class HtmlFormatterFactoryTests
     public void TestGetHtmlFormatter_InvalidType_ThrowsArgumentOutOfRangeException()
     {
         // arrange
-        var invalidType = (HtmlFormatterType)999; // Invalid enum value
+        const HtmlFormatterType invalidType = (HtmlFormatterType)999; // Invalid enum value
 
         // act
         var act = () => _factory.Get(invalidType);
