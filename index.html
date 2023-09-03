@@ -119,16 +119,29 @@ public interface FooService {
 </code></pre>
 <h2 id="installation">Installation</h2>
 <h3 id="package-manager">Package Manager</h3>
-<pre><code class="lang-text">Install-Package Markdown.ColorCode -Version 1.1.2
+<pre><code class="lang-text">Install-Package Markdown.ColorCode -Version 2.0.0
 </code></pre>
 <h3 id="net-cli">.NET CLI</h3>
-<pre><code class="lang-text">dotnet add package Markdown.ColorCode --version 1.1.2
+<pre><code class="lang-text">dotnet add package Markdown.ColorCode --version 2.0.0
 </code></pre>
 <h2 id="usage">Usage</h2>
 <p>To use this extension with <a href="https://github.com/xoofx/markdig">Markdig</a>, simply install the <code>Markdown.ColorCode</code> package use the ColorCode extension:</p>
 <pre><code class="lang-cs">var pipeline = new MarkdownPipelineBuilder()
     .UseAdvancedExtensions()
     .UseColorCode()
+    .Build();
+
+var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
+</code></pre>
+<p>Several optional configuration options are also at your disposal:</p>
+<pre><code class="lang-cs">var pipeline = new MarkdownPipelineBuilder()
+    .UseAdvancedExtensions()
+    .UseColorCode(
+        HtmlFormatterType.Style, // use style-based colorization (default)
+        myCustomStyleDictionary, // use a custom colorization style dictionary
+        myAdditionalLanguages, // augment the built-in language support
+        myCustomLanguageId // set a default language ID to fall back to
+    )
     .Build();
 
 var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);

@@ -14,23 +14,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../site/yml/api/Markdown.ColorCode.ColorCodeBlockRenderer.yml",
+      "source_relative_path": "../site/yml/api/Markdown.ColorCode.HtmlFormatterType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Markdown.ColorCode.ColorCodeBlockRenderer.html",
-          "hash": "i4PRzSijs+8gz5AiRIJeug=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../site/yml/api/Markdown.ColorCode.ColorCodeExtension.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Markdown.ColorCode.ColorCodeExtension.html",
-          "hash": "qkW7kGrZDqL3yoMzBtrM7w=="
+          "relative_path": "api/Markdown.ColorCode.HtmlFormatterType.html",
+          "hash": "rdwqyRf8Rv3OaxvG5GTnkA=="
         }
       },
       "is_incremental": false,
@@ -42,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Markdown.ColorCode.MarkdownPipelineBuilderExtensions.html",
-          "hash": "XQ/RVAsF4v708LOTpvGPFQ=="
+          "hash": "/NGiyww9oSZ68vmUD1EXjQ=="
         }
       },
       "is_incremental": false,
@@ -54,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Markdown.ColorCode.html",
-          "hash": "tukcq2m2cww0nW1OPC9UIw=="
+          "hash": "IANpWq8GnJel9d0KaaOegQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "rOLkBi0C+8Fm1bYuAQPdaA=="
+          "hash": "wxESJsJJRJLmq4cBo2KXzQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "vDHV7tXRFtorKqxY3Zbvjw=="
+          "hash": "KC93DxpuX6+sytbX7+kycA=="
         }
       },
       "is_incremental": false,
@@ -120,7 +108,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 4,
+          "total_file_count": 3,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
