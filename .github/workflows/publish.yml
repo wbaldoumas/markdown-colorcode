@@ -13,7 +13,7 @@ jobs:
       name: "Publish Release"
       url: https://www.nuget.org/packages/Markdown.ColorCode/
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
