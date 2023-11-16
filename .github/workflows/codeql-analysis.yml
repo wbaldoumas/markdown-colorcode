@@ -48,10 +48,10 @@ jobs:
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
     # Set up required .NET SDKs
-    - name: Setup .NET 6
+    - name: Setup .NET 8
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x        
+        dotnet-version: 8.0.x        
 
     # Restore & Build
     - name: Restore
