@@ -1,7 +1,4 @@
-﻿using ColorCode.Common;
-using CsharpToColouredHTML.Core;
-
-namespace Markdown.ColorCode.Internal;
+﻿namespace Markdown.ColorCode.Internal;
 
 /// <summary>
 ///     A renderer which colorizes code blocks using ColorCode.
@@ -57,10 +54,7 @@ internal sealed class ColorCodeBlockRenderer : HtmlObjectRenderer<CodeBlock>
         }
 
         var code = _codeExtractor.ExtractCode(codeBlock);
-
-        var html = language.Id == LanguageId.CSharp ?
-            new CsharpColourer().ProcessSourceCode(code, new HTMLEmitter(new HTMLEmitterSettings().DisableIframe().DisableLineNumbers())) :
-            _htmlFormatter.GetHtmlString(code, language);
+        var html = _htmlFormatter.GetHtmlString(code, language);
 
         renderer.Write(html);
     }

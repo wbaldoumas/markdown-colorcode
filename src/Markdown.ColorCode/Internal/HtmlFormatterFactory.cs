@@ -16,6 +16,8 @@ internal sealed class HtmlFormatterFactory : IHtmlFormatterFactory
     {
         HtmlFormatterType.Style => new HtmlStyleFormatter(_styleDictionary),
         HtmlFormatterType.Css => new HtmlCssFormatter(_styleDictionary),
+        HtmlFormatterType.StyleWithCSharpToColoredHtml => new CSharpToColouredHtmlFormatter(new HtmlStyleFormatter(_styleDictionary)),
+        HtmlFormatterType.CssWithCSharpToColoredHtml => new CSharpToColouredHtmlFormatter(new HtmlCssFormatter(_styleDictionary)),
         _ => throw new ArgumentOutOfRangeException(nameof(htmlFormatterType), htmlFormatterType, null)
     };
 }
