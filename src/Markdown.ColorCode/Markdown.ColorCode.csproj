@@ -47,9 +47,7 @@
   <ItemGroup>
     <PackageReference Include="ColorCode.Core" Version="2.0.15" />
     <PackageReference Include="ColorCode.HTML" Version="2.0.15" />
-    <PackageReference Include="CsharpToColouredHTML.Core" Version="1.0.41">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="CsharpToColouredHTML.Core" Version="1.0.41" />
     <PackageReference Include="Markdig" Version="0.34.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
