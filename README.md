@@ -102,6 +102,28 @@ var pipeline = new MarkdownPipelineBuilder()
 var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
 ```
 
+### Improved C# Syntax Highlighting
+
+For an improved experience with C# code blocks, consider using the `Markdown.ColorCode.CSharpToColoredHtml` package. This package provides a more robust syntax highlighting experience for C# code blocks by leveraging [CSharpToColouredHtml.Core](https://github.com/Swiftly1/CsharpToColouredHTML).
+
+```cs
+var pipeline = new MarkdownPipelineBuilder()
+    .UseAdvancedExtensions()
+    .UseColorCodeWithCSharpToColoredHtml(
+        HtmlFormatterType.Style, // use style-based colorization (default)
+        myCustomStyleDictionary, // use a custom colorization style dictionary
+        myHtmlEmitterSettings, // configures CSharpToColouredHtml's HTML emitter
+        myAdditionalLanguages, // augment the built-in language support
+        myCustomLanguageId // set a default language ID to fall back to
+    )
+    .Build();
+
+var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
+```
+
+> [!CAUTION]
+> The `CsharpToColouredHTML` package introduces dependencies which will not work well with Blazor WebAssembly projects. Either generate the HTML on the server side and send it to the client or use the base `Markdown.ColorCode` package if you are working with Blazor WebAssembly. See https://github.com/dotnet/aspnetcore/issues/27373 and https://github.com/dotnet/aspnetcore/issues/26724 for more details on the problem.
+
 ## Roadmap
 
 See the [open issues](https://github.com/wbaldoumas/markdown-colorcode/issues) for a list of proposed features (and known issues).

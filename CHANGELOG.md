@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2024-02-12
+
+### Changed
+
+- Introduced a new `Markdown.ColorCode.CSharpToColoredHtml` package that provides improved syntax highlighting for C# code blocks. See the [README](README.md) for more information.
+
 ## [2.1.0] - 2023-11-15
 
 ### Changed
