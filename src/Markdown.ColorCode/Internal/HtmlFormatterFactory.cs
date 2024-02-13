@@ -1,6 +1,9 @@
-﻿namespace Markdown.ColorCode.Internal;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Markdown.ColorCode.Internal;
 
 /// <inheritdoc cref="IHtmlFormatterFactory"/>
+[ExcludeFromCodeCoverage]
 internal sealed class HtmlFormatterFactory : IHtmlFormatterFactory
 {
     private readonly StyleDictionary _styleDictionary;
@@ -16,6 +19,8 @@ internal sealed class HtmlFormatterFactory : IHtmlFormatterFactory
     {
         HtmlFormatterType.Style => new HtmlStyleFormatter(_styleDictionary),
         HtmlFormatterType.Css => new HtmlCssFormatter(_styleDictionary),
+        HtmlFormatterType.StyleWithCSharpToColoredHtml => throw new NotSupportedException("In order to use StyleWithCSharpToColoredHtml you must install Markdown.ColorCode.CSharpToColoredHtml and invoke UseColorCodeWithCSharpToColoredHtml."),
+        HtmlFormatterType.CssWithCSharpToColoredHtml => throw new NotSupportedException("In order to use CssWithCSharpToColoredHtml you must install Markdown.ColorCode.CSharpToColoredHtml and invoke UseColorCodeWithCSharpToColoredHtml."),
         _ => throw new ArgumentOutOfRangeException(nameof(htmlFormatterType), htmlFormatterType, null)
     };
 }

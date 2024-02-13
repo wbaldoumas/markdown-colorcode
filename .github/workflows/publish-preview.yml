@@ -38,6 +38,9 @@ jobs:
     - name: Pack NuGet
       run: dotnet pack src/Markdown.ColorCode/Markdown.ColorCode.csproj --no-build --configuration Release /p:Version=${VERSION} --output src
 
+    - name: Pack NuGet
+      run: dotnet pack src/Markdown.ColorCode.CSharpToColoredHtml/Markdown.ColorCode.CSharpToColoredHtml.csproj --no-build --configuration Release /p:Version=${VERSION} --output src
+
     - name: Publish NuGet
       run: dotnet nuget push src/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_KEY}
       env:

@@ -36,3 +36,7 @@ dotnet_diagnostic.SA1642.severity = none
 # require XML documentation
 dotnet_diagnostic.SA1600.severity = none
 dotnet_diagnostic.CS1591.severity = none
+
+[*.{csproj,targets,props}]
+indent_style = space
+indent_size = 2

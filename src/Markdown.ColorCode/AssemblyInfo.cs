@@ -11,3 +11,4 @@ global using System.Runtime.CompilerServices;
 global using System.Text;
 
 [assembly: InternalsVisibleTo("Markdown.ColorCode.UnitTests")]
+[assembly: InternalsVisibleTo("Markdown.ColorCode.CSharpToColoredHtml")]

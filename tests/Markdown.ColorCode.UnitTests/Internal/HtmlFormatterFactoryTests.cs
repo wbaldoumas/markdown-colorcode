@@ -38,4 +38,18 @@ internal sealed class HtmlFormatterFactoryTests
             .Throw<ArgumentOutOfRangeException>()
             .And.ParamName.Should().Be("htmlFormatterType");
     }
+
+    [Test]
+    [TestCase(HtmlFormatterType.StyleWithCSharpToColoredHtml)]
+    [TestCase(HtmlFormatterType.CssWithCSharpToColoredHtml)]
+    public void TestGetHtmlFormatter_UnsupportedType_ThrowsNotSupportedException(HtmlFormatterType unsupportedType)
+    {
+        // act
+        var act = () => _factory.Get(unsupportedType);
+
+        // assert
+        act.Should()
+            .Throw<NotSupportedException>()
+            .WithMessage($"In order to use {unsupportedType} you must install Markdown.ColorCode.CSharpToColoredHtml and invoke UseColorCodeWithCSharpToColoredHtml.");
+    }
 }
