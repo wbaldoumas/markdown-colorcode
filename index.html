@@ -119,10 +119,10 @@ public interface FooService {
 </code></pre>
 <h2 id="installation">Installation</h2>
 <h3 id="package-manager">Package Manager</h3>
-<pre><code class="lang-text">Install-Package Markdown.ColorCode -Version 2.1.0
+<pre><code class="lang-text">Install-Package Markdown.ColorCode -Version 2.2.0
 </code></pre>
 <h3 id="net-cli">.NET CLI</h3>
-<pre><code class="lang-text">dotnet add package Markdown.ColorCode --version 2.1.0
+<pre><code class="lang-text">dotnet add package Markdown.ColorCode --version 2.2.0
 </code></pre>
 <h2 id="usage">Usage</h2>
 <p>To use this extension with <a href="https://github.com/xoofx/markdig">Markdig</a>, simply install the <code>Markdown.ColorCode</code> package use the ColorCode extension:</p>
@@ -146,6 +146,25 @@ var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
 
 var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
 </code></pre>
+<h3 id="improved-c-syntax-highlighting">Improved C# Syntax Highlighting</h3>
+<p>For an improved experience with C# code blocks, consider using the <code>Markdown.ColorCode.CSharpToColoredHtml</code> package. This package provides a more robust syntax highlighting experience for C# code blocks by leveraging <a href="https://github.com/Swiftly1/CsharpToColouredHTML">CSharpToColouredHtml.Core</a>.</p>
+<pre><code class="lang-cs">var pipeline = new MarkdownPipelineBuilder()
+    .UseAdvancedExtensions()
+    .UseColorCodeWithCSharpToColoredHtml(
+        HtmlFormatterType.Style, // use style-based colorization (default)
+        myCustomStyleDictionary, // use a custom colorization style dictionary
+        myHtmlEmitterSettings, // configures CSharpToColouredHtml's HTML emitter
+        myAdditionalLanguages, // augment the built-in language support
+        myCustomLanguageId // set a default language ID to fall back to
+    )
+    .Build();
+
+var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
+</code></pre>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>The <code>CsharpToColouredHTML</code> package introduces dependencies which will not work well with Blazor WebAssembly projects. Either generate the HTML on the server side and send it to the client or use the base <code>Markdown.ColorCode</code> package if you are working with Blazor WebAssembly. See <a href="https://github.com/dotnet/aspnetcore/issues/27373">https://github.com/dotnet/aspnetcore/issues/27373</a> and <a href="https://github.com/dotnet/aspnetcore/issues/26724">https://github.com/dotnet/aspnetcore/issues/26724</a> for more details on the problem.</p>
+</div>
 <h2 id="roadmap">Roadmap</h2>
 <p>See the <a href="https://github.com/wbaldoumas/markdown-colorcode/issues">open issues</a> for a list of proposed features (and known issues).</p>
 <h2 id="contributing">Contributing</h2>

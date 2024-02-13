@@ -19,12 +19,24 @@ references:
   commentId: F:Markdown.ColorCode.HtmlFormatterType.Css
   fullName: Markdown.ColorCode.HtmlFormatterType.Css
   nameWithType: HtmlFormatterType.Css
+- uid: Markdown.ColorCode.HtmlFormatterType.CssWithCSharpToColoredHtml
+  name: CssWithCSharpToColoredHtml
+  href: api/Markdown.ColorCode.HtmlFormatterType.html#Markdown_ColorCode_HtmlFormatterType_CssWithCSharpToColoredHtml
+  commentId: F:Markdown.ColorCode.HtmlFormatterType.CssWithCSharpToColoredHtml
+  fullName: Markdown.ColorCode.HtmlFormatterType.CssWithCSharpToColoredHtml
+  nameWithType: HtmlFormatterType.CssWithCSharpToColoredHtml
 - uid: Markdown.ColorCode.HtmlFormatterType.Style
   name: Style
   href: api/Markdown.ColorCode.HtmlFormatterType.html#Markdown_ColorCode_HtmlFormatterType_Style
   commentId: F:Markdown.ColorCode.HtmlFormatterType.Style
   fullName: Markdown.ColorCode.HtmlFormatterType.Style
   nameWithType: HtmlFormatterType.Style
+- uid: Markdown.ColorCode.HtmlFormatterType.StyleWithCSharpToColoredHtml
+  name: StyleWithCSharpToColoredHtml
+  href: api/Markdown.ColorCode.HtmlFormatterType.html#Markdown_ColorCode_HtmlFormatterType_StyleWithCSharpToColoredHtml
+  commentId: F:Markdown.ColorCode.HtmlFormatterType.StyleWithCSharpToColoredHtml
+  fullName: Markdown.ColorCode.HtmlFormatterType.StyleWithCSharpToColoredHtml
+  nameWithType: HtmlFormatterType.StyleWithCSharpToColoredHtml
 - uid: Markdown.ColorCode.MarkdownPipelineBuilderExtensions
   name: MarkdownPipelineBuilderExtensions
   href: api/Markdown.ColorCode.MarkdownPipelineBuilderExtensions.html
