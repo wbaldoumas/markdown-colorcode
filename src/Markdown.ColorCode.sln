@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markdown.ColorCode", "Markd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markdown.ColorCode.UnitTests", "..\tests\Markdown.ColorCode.UnitTests\Markdown.ColorCode.UnitTests.csproj", "{C4A4653F-275A-42AC-8425-51D99F843511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markdown.ColorCode.CSharpToColoredHtml", "Markdown.ColorCode.CSharpToColoredHtml\Markdown.ColorCode.CSharpToColoredHtml.csproj", "{9EB3A952-F898-43D7-B159-2B3A01BC204F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C4A4653F-275A-42AC-8425-51D99F843511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4A4653F-275A-42AC-8425-51D99F843511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4A4653F-275A-42AC-8425-51D99F843511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB3A952-F898-43D7-B159-2B3A01BC204F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB3A952-F898-43D7-B159-2B3A01BC204F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB3A952-F898-43D7-B159-2B3A01BC204F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB3A952-F898-43D7-B159-2B3A01BC204F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

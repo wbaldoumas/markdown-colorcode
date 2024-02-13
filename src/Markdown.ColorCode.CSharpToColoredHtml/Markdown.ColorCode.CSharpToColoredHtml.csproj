@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Version>2.2.0</Version>
+		<Authors>William Baldoumas</Authors>
+		<Description>An extension for Markdig that adds syntax highlighting to code through the power of ColorCode, boosted with the CsharpToColouredHTML.Core package.</Description>
+		<Copyright>Copyright ©2022 William Baldoumas</Copyright>
+		<PackageProjectUrl>https://wbaldoumas.github.io/markdown-colorcode/index.html</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/wbaldoumas/markdown-colorcode</RepositoryUrl>
+		<PackageTags>markdig;markdown;html;colorcode;colorize;highlight;renderer</PackageTags>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageId>Markdown.ColorCode.CSharpToColoredHtml</PackageId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\assets\images\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\CHANGELOG.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="ColorCode.Core" Version="2.0.15" />
+	  <PackageReference Include="CsharpToColouredHTML.Core" Version="1.0.41" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Markdown.ColorCode\Markdown.ColorCode.csproj" />
+	</ItemGroup>
+
+</Project>
