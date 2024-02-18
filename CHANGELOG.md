@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.1] - 2024-02-17
+
+### Changed
+
+Dependency updates:
+| Package | Change |
+|---|---|
+| [CsharpToColouredHTML.Core](https://togithub.com/Swiftly1/CsharpToColouredHTML) | `1.0.41` -> `1.0.42` |
+| [HtmlAgilityPack](http://html-agility-pack.net/) ([source](https://togithub.com/zzzprojects/html-agility-pack)) | `1.11.58` -> `1.11.59` |
+| [Markdig](https://togithub.com/lunet-io/markdig) ([source](https://togithub.com/xoofx/markdig)) | `0.34.0` -> `0.35.0` |
+| [NSubstitute.Analyzers.CSharp](https://togithub.com/nsubstitute/NSubstitute.Analyzers) | `1.0.16` -> `1.0.17` |
+
 ## [2.2.0] - 2024-02-12
 
 ### Changed
