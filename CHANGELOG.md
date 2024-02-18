@@ -17,7 +17,6 @@ Dependency updates:
 | [Markdig](https://togithub.com/lunet-io/markdig) ([source](https://togithub.com/xoofx/markdig)) | `0.34.0` -> `0.35.0` |
 | [NSubstitute.Analyzers.CSharp](https://togithub.com/nsubstitute/NSubstitute.Analyzers) | `1.0.16` -> `1.0.17` |
 
-
 ## [2.2.0] - 2024-02-12
 
 ### Changed
