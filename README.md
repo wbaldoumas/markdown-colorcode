@@ -121,7 +121,7 @@ var pipeline = new MarkdownPipelineBuilder()
 var colorizedHtml = Markdig.Markdown.ToHtml(someMarkdown, pipeline);
 ```
 
-> [!CAUTION]
+> [!NOTE]
 > The `CsharpToColouredHTML` package introduces dependencies which will not work well with Blazor WebAssembly projects. Either generate the HTML on the server side and send it to the client or use the base `Markdown.ColorCode` package if you are working with Blazor WebAssembly. See https://github.com/dotnet/aspnetcore/issues/27373 and https://github.com/dotnet/aspnetcore/issues/26724 for more details on the problem.
 
 ## Roadmap
