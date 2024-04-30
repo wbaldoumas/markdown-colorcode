@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.2] - 2024-04-30
+
+### Changed
+
+Dependency Updates:
+
+| Package | Change |
+|---|---|
+| [Markdig](https://togithub.com/lunet-io/markdig) ([source](https://togithub.com/xoofx/markdig)) | `0.35.0` -> `0.37.0` |
+| [CsharpToColouredHTML.Core](https://togithub.com/Swiftly1/CsharpToColouredHTML) | `1.0.42` -> `1.0.44` | 
+
 ## [2.2.1] - 2024-02-17
 
 ### Changed
