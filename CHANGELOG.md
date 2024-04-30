@@ -14,7 +14,7 @@ Dependency Updates:
 | Package | Change |
 |---|---|
 | [Markdig](https://togithub.com/lunet-io/markdig) ([source](https://togithub.com/xoofx/markdig)) | `0.35.0` -> `0.37.0` |
-| [CsharpToColouredHTML.Core](https://togithub.com/Swiftly1/CsharpToColouredHTML) | `1.0.42` -> `1.0.44` | 
+| [CsharpToColouredHTML.Core](https://togithub.com/Swiftly1/CsharpToColouredHTML) | `1.0.42` -> `1.0.44` |
 
 ## [2.2.1] - 2024-02-17
 
