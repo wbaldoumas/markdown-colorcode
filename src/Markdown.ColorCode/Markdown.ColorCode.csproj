@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+  <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+  <ImplicitUsings>enable</ImplicitUsings>
+  <Nullable>enable</Nullable>
 	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<Version>2.2.1</Version>
+	<Version>2.2.2</Version>
 	<Authors>William Baldoumas</Authors>
 	<Description>An extension for Markdig that adds syntax highlighting to code through the power of ColorCode.</Description>
 	<Copyright>Copyright ©2024 William Baldoumas</Copyright>

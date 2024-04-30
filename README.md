@@ -64,13 +64,13 @@ public interface FooService {
 ### Package Manager
 
 ```text
-Install-Package Markdown.ColorCode -Version 2.2.1
+Install-Package Markdown.ColorCode -Version 2.2.2
 ```
 
 ### .NET CLI
 
 ```text
-dotnet add package Markdown.ColorCode --version 2.2.1
+dotnet add package Markdown.ColorCode --version 2.2.2
 ```
 
 ## Usage
