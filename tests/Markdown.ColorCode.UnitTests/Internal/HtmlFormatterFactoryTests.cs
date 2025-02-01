@@ -9,7 +9,7 @@ internal sealed class HtmlFormatterFactoryTests
     [SetUp]
     public void Setup()
     {
-        _styleDictionary = new StyleDictionary(); // Assuming appropriate construction or mock
+        _styleDictionary = []; // Assuming appropriate construction or mock
         _factory = new HtmlFormatterFactory(_styleDictionary);
     }
 

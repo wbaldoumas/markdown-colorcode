@@ -112,7 +112,7 @@ That was some **code**.
 
     private static readonly MarkdownPipeline DefaultLanguagePipeline = new MarkdownPipelineBuilder()
         .UseAdvancedExtensions()
-        .UseColorCode(HtmlFormatterType.Style, StyleDictionary.DefaultDark, Enumerable.Empty<ILanguage>(), "csharp")
+        .UseColorCode(HtmlFormatterType.Style, StyleDictionary.DefaultDark, [], "csharp")
         .Build();
 
     private static IEnumerable<TestCaseData> TestCases
@@ -298,7 +298,7 @@ That was some **code**.
 
         var colorCodeBlockRenderer = new ColorCodeBlockRenderer(
             mockUnderlyingCodeBlockRenderer,
-            new LanguageExtractor(Enumerable.Empty<ILanguage>(), string.Empty),
+            new LanguageExtractor([], string.Empty),
             new CodeExtractor(),
             new HtmlStyleFormatter(StyleDictionary.DefaultDark)
         );

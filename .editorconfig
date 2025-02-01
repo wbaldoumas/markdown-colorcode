@@ -31,6 +31,9 @@ dotnet_diagnostic.SA1633.severity = none
 # require standardized summary test for constructors
 dotnet_diagnostic.SA1642.severity = none
 
+# opening square brackets cannot be preceded by a space
+dotnet_diagnostic.SA1010.severity = none
+
 [*Tests.cs]
 
 # require XML documentation

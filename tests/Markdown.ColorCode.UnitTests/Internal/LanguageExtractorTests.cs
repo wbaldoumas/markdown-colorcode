@@ -14,7 +14,7 @@ internal sealed class LanguageExtractorTests
         _mockLanguage.Id.Returns("text");
         _mockLanguage.Name.Returns("Text");
 
-        _languageExtractor = new LanguageExtractor(new[] { _mockLanguage }, "text");
+        _languageExtractor = new LanguageExtractor([_mockLanguage], "text");
     }
 
     [Test]
@@ -57,7 +57,7 @@ internal sealed class LanguageExtractorTests
     public void When_LanguageExtractor_does_not_have_default_language_null_is_returned()
     {
         // arrange
-        var noDefaultColorCodeLanguageExtractor = new LanguageExtractor(new[] { _mockLanguage }, string.Empty);
+        var noDefaultColorCodeLanguageExtractor = new LanguageExtractor([_mockLanguage], string.Empty);
 
         var mockFencedCodeBlock = Substitute.For<IFencedBlock>();
 

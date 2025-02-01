@@ -1,7 +1,6 @@
 ﻿global using ColorCode;
 global using ColorCode.Styling;
 global using Markdig;
-global using Markdig.Helpers;
 global using Markdig.Parsers;
 global using Markdig.Renderers;
 global using Markdig.Renderers.Html;

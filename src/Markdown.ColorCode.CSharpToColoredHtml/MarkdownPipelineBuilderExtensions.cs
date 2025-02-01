@@ -1,4 +1,6 @@
-﻿namespace Markdown.ColorCode.CSharpToColoredHtml;
+﻿using CsharpToColouredHTML.Core.Emitters.HTML;
+
+namespace Markdown.ColorCode.CSharpToColoredHtml;
 
 /// <summary>
 ///     Extensions for adding ColorCode code colorization to the Markdig <see cref="MarkdownPipelineBuilder"/>.
@@ -24,7 +26,7 @@ public static class MarkdownPipelineBuilderExtensions
         string? defaultLanguageId = null)
     {
         var languageExtractor = new LanguageExtractor(
-            additionalLanguages ?? Enumerable.Empty<ILanguage>(),
+            additionalLanguages ?? [],
             defaultLanguageId ?? string.Empty
         );
 

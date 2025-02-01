@@ -9,7 +9,7 @@ internal sealed class CodeExtractor : ICodeExtractor
         var code = new StringBuilder();
 
         // ReSharper disable once NullCoalescingConditionIsAlwaysNotNullAccordingToAPIContract
-        var lines = leafBlock.Lines.Lines ?? Array.Empty<StringLine>();
+        var lines = leafBlock.Lines.Lines ?? [];
         var totalLines = lines.Length;
 
         for (var index = 0; index < totalLines; index++)

@@ -12,7 +12,7 @@ internal sealed class ColorCodeExtensionTests
         var pipeline = new MarkdownPipelineBuilder().Build();
 
         var colorCodeExtension = new ColorCodeExtension(
-            new LanguageExtractor(Enumerable.Empty<ILanguage>(), string.Empty),
+            new LanguageExtractor([], string.Empty),
             new CodeExtractor(),
             new HtmlStyleFormatter(StyleDictionary.DefaultDark)
         );
@@ -37,7 +37,7 @@ internal sealed class ColorCodeExtensionTests
         invalidRenderer.ObjectRenderers.TryRemove<CodeBlockRenderer>();
 
         var colorCodeExtension = new ColorCodeExtension(
-            new LanguageExtractor(Enumerable.Empty<ILanguage>(), string.Empty),
+            new LanguageExtractor([], string.Empty),
             new CodeExtractor(),
             new HtmlStyleFormatter(StyleDictionary.DefaultDark)
         );

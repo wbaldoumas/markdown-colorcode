@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using ColorCode.Common;
+using CsharpToColouredHTML.Core.Emitters.HTML;
 
 namespace Markdown.ColorCode.CSharpToColoredHtml.Internal;
 

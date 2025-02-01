@@ -22,7 +22,7 @@ public static class MarkdownPipelineBuilderExtensions
         string? defaultLanguageId = null)
     {
         var languageExtractor = new LanguageExtractor(
-            additionalLanguages ?? Enumerable.Empty<ILanguage>(),
+            additionalLanguages ?? [],
             defaultLanguageId ?? string.Empty
         );
 

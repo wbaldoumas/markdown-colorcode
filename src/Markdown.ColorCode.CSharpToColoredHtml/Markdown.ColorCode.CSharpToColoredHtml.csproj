@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -46,7 +46,7 @@
 
 	<ItemGroup>
     <PackageReference Include="ColorCode.Core" Version="2.0.15" />
-	  <PackageReference Include="CsharpToColouredHTML.Core" Version="1.0.44" />
+	  <PackageReference Include="CsharpToColouredHTML.Core" Version="3.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
