@@ -7,7 +7,7 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>2.3.0</Version>
+		<Version>3.0.0</Version>
 		<Authors>William Baldoumas</Authors>
 		<Description>An extension for Markdig that adds syntax highlighting to code through the power of ColorCode, boosted with the CsharpToColouredHTML.Core package.</Description>
 		<Copyright>Copyright ©2024 William Baldoumas</Copyright>
