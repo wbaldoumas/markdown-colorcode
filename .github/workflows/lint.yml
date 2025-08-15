@@ -10,7 +10,7 @@ jobs:
   markdown:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: 🧼 lint markdown files
         uses: avto-dev/markdown-lint@v1
         with:
@@ -20,14 +20,14 @@ jobs:
   json:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: 🧼 lint json files
         uses: ocular-d/json-linter@0.0.2
 
   renovate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: 🧼 lint renovate config
         uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.1.1
         with:
