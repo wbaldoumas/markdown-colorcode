@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.1] - 2025-08-30
+
+### Changed
+
+Dependency updates:
+
+| Package | Change |
+|---|---|
+| [Markdig](https://togithub.com/lunet-io/markdig) ([source](https://togithub.com/xoofx/markdig)) | `0.40.0` -> `0.41.3` |
+| [CsharpToColouredHTML.Core](https://togithub.com/Swiftly1/CsharpToColouredHTML) | `3.0.2` -> `3.2.0` |
+
+**Notes:**
+
+- **Markdig** includes new features and fixes such as `AutoLinkOptions.AllowDomainWithoutPeriod`, perf improvements, CommonMark 0.31.2 updates, and bug fixes affecting `Markdown.ToPlainText` for code blocks and ordered list round-tripping.
+- **CsharpToColouredHTML.Core** brings improved heuristics for ValueTuples, `override`/`event` keywords, interfaces, and other cases, plus a new `"default"` color to help detect unmatched syntax during debugging.
+
 ## [3.0.0] - 2025-02-01
 
 ### Changed
