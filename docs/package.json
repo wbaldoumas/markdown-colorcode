@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "author": "",
     "dependencies": {
-        "js-yaml": "4.2.0"
+        "js-yaml": "4.3.0"
     },
     "license": "MIT"
 }
