@@ -51,7 +51,7 @@ jobs:
     - name: Setup .NET 8
       uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: 10.0.x
 
     # Restore & Build
     - name: Restore
