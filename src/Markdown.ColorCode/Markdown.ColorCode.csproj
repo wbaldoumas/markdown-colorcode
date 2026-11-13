@@ -49,7 +49,7 @@
     <PackageReference Include="ColorCode.Core" Version="2.0.15" />
     <PackageReference Include="ColorCode.HTML" Version="2.0.15" />
     <PackageReference Include="Markdig" Version="1.6.0" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.3.180">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
